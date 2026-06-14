@@ -1810,6 +1810,196 @@
 </head>
 <body>
 
+<!-- ============================================================== -->
+<!-- JMP · Tráfego pago: rastreamento, atribuição & campanhas       -->
+<!-- ============================================================== -->
+<!--
+  COMO CONFIGURAR (preencha os IDs em JMP_CONFIG abaixo):
+   • APP_URL ............ domínio do app (rota /c/:token e cadastro). Ajuste se não for app.jmptreino.com
+   • META_PIXEL_ID ...... Pixel da Meta (Gerenciador de Eventos) — habilita PageView/Lead/InitiateCheckout
+   • GA4_ID ............. Google Analytics 4 (G-XXXX)
+   • GOOGLE_ADS_ID ...... Google Ads (AW-XXXX)
+   • GOOGLE_ADS_LEAD_LABEL  rótulo da conversão "Lead" no Google Ads
+   • SUPABASE_URL / SUPABASE_ANON_KEY .. opcional: liga "message match" (a LP mostra a oferta da campanha)
+
+  COMO USAR NAS CAMPANHAS:
+   • Aba Cobranças → Campanhas (app) gera um link /c/<token>.
+   • No anúncio pago, aponte para:  https://www.jmptreino.com/?c=<token>&utm_source=facebook&utm_medium=cpc&utm_campaign=<nome>
+   • A LP captura os UTMs, e os botões de teste grátis levam direto ao cadastro da campanha no app,
+     carregando a atribuição. Sem token, o funil segue para o WhatsApp (enriquecido com a origem).
+-->
+<script>
+(function () {
+  "use strict";
+
+  var JMP_CONFIG = {
+    APP_URL: "https://app.jmptreino.com",
+    META_PIXEL_ID: "",
+    GA4_ID: "",
+    GOOGLE_ADS_ID: "",
+    GOOGLE_ADS_LEAD_LABEL: "",
+    WHATSAPP: "5543996329538",
+    SUPABASE_URL: "",
+    SUPABASE_ANON_KEY: ""
+  };
+  window.JMP_CONFIG = JMP_CONFIG;
+
+  // ---- 1. Atribuição: captura e persiste UTMs / click IDs (first-touch) ----
+  var TRACK_KEYS = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","fbclid","gclid","ttclid"];
+  var CAMP_KEYS  = ["c","campanha"];
+  var STORE_KEY  = "jmp_attribution";
+
+  function readStore() {
+    try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch (e) { return {}; }
+  }
+  function captureAttribution() {
+    var params = new URLSearchParams(window.location.search);
+    var stored = readStore();
+    var changed = false;
+    TRACK_KEYS.concat(CAMP_KEYS).forEach(function (k) {
+      var v = params.get(k);
+      if (v && stored[k] !== v) { stored[k] = v; changed = true; }
+    });
+    if (changed) {
+      stored._first_seen = stored._first_seen || new Date().toISOString();
+      stored._landing = stored._landing || (window.location.pathname + window.location.search);
+      try { localStorage.setItem(STORE_KEY, JSON.stringify(stored)); } catch (e) {}
+    }
+    return stored;
+  }
+  var attribution = captureAttribution();
+
+  function campaignToken() { return attribution.c || attribution.campanha || ""; }
+  function attributionQuery() {
+    var qs = [];
+    TRACK_KEYS.forEach(function (k) {
+      if (attribution[k]) qs.push(encodeURIComponent(k) + "=" + encodeURIComponent(attribution[k]));
+    });
+    return qs.join("&");
+  }
+  function appCampaignUrl() {
+    var base = (JMP_CONFIG.APP_URL || "").replace(/\/+$/, "");
+    var token = campaignToken();
+    var url = token ? base + "/c/" + encodeURIComponent(token) : base;
+    var q = attributionQuery();
+    return q ? url + "?" + q : url;
+  }
+
+  // ---- 2. Pixels (só carregam se o ID estiver configurado) ----
+  if (JMP_CONFIG.META_PIXEL_ID) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    window.fbq('init', JMP_CONFIG.META_PIXEL_ID);
+    window.fbq('track', 'PageView');
+  }
+  if (JMP_CONFIG.GA4_ID || JMP_CONFIG.GOOGLE_ADS_ID) {
+    var tagId = JMP_CONFIG.GA4_ID || JMP_CONFIG.GOOGLE_ADS_ID;
+    var gs = document.createElement('script');
+    gs.async = true;
+    gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + tagId;
+    document.head.appendChild(gs);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    if (JMP_CONFIG.GA4_ID) window.gtag('config', JMP_CONFIG.GA4_ID);
+    if (JMP_CONFIG.GOOGLE_ADS_ID) window.gtag('config', JMP_CONFIG.GOOGLE_ADS_ID);
+  }
+
+  // ---- 3. Disparo unificado de eventos ----
+  function track(event, params) {
+    params = params || {};
+    if (window.fbq) { try { window.fbq('track', event, params); } catch (e) {} }
+    if (window.gtag) { try { window.gtag('event', event, params); } catch (e) {} }
+  }
+  function trackAdsConversion() {
+    if (window.gtag && JMP_CONFIG.GOOGLE_ADS_ID && JMP_CONFIG.GOOGLE_ADS_LEAD_LABEL) {
+      try { window.gtag('event', 'conversion', { send_to: JMP_CONFIG.GOOGLE_ADS_ID + "/" + JMP_CONFIG.GOOGLE_ADS_LEAD_LABEL }); } catch (e) {}
+    }
+  }
+  window.jmpTrack = track;
+
+  // ---- 4. Enriquecimento de CTAs (atribuição + eventos + ligação com campanha) ----
+  function attribSuffix() {
+    var parts = [];
+    if (attribution.utm_source) parts.push(attribution.utm_source + (attribution.utm_medium ? "/" + attribution.utm_medium : ""));
+    if (attribution.utm_campaign) parts.push("camp: " + attribution.utm_campaign);
+    if (campaignToken()) parts.push("token: " + campaignToken());
+    return parts.length ? "\n\n(via " + parts.join(" · ") + ")" : "";
+  }
+  function appendWaText(href, suffix) {
+    try {
+      var u = new URL(href);
+      var t = u.searchParams.get('text') || '';
+      u.searchParams.set('text', t + suffix);
+      return u.toString();
+    } catch (e) { return href; }
+  }
+
+  var TRIAL_RE = /(teste|7%20dias|come%C3%A7ar|gr%C3%A1tis)/i;
+
+  function wireCtas() {
+    var token = campaignToken();
+    var suffix = attribSuffix();
+    var links = document.querySelectorAll('a[href*="wa.me/"]');
+    Array.prototype.forEach.call(links, function (a) {
+      var href = a.getAttribute('href') || '';
+      var isTrial = TRIAL_RE.test(href);
+
+      if (token && isTrial) {
+        // Campanha ativa via LP: leva direto ao cadastro da campanha no app, carregando a atribuição
+        a.setAttribute('href', appCampaignUrl());
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener');
+        a.addEventListener('click', function () {
+          track('InitiateCheckout', { content_name: 'app_trial_signup' });
+          trackAdsConversion();
+        });
+      } else {
+        if (suffix) a.setAttribute('href', appendWaText(href, suffix));
+        a.addEventListener('click', function () {
+          track(isTrial ? 'Lead' : 'Contact', { content_name: isTrial ? 'whatsapp_trial' : 'whatsapp' });
+          if (isTrial) trackAdsConversion();
+        });
+      }
+    });
+  }
+
+  // ---- 5. Opcional: "message match" — a LP reflete a oferta da campanha ----
+  function applyMessageMatch() {
+    var token = campaignToken();
+    if (!token || !JMP_CONFIG.SUPABASE_URL || !JMP_CONFIG.SUPABASE_ANON_KEY) return;
+    var url = JMP_CONFIG.SUPABASE_URL.replace(/\/+$/, "") +
+      "/rest/v1/campanhas?token=eq." + encodeURIComponent(token) +
+      "&ativo=eq.true&select=nome,pos_cadastro,dias_trial,tipo_desconto,valor_desconto,headline";
+    fetch(url, { headers: { apikey: JMP_CONFIG.SUPABASE_ANON_KEY, Authorization: "Bearer " + JMP_CONFIG.SUPABASE_ANON_KEY } })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (rows) {
+        var c = rows && rows[0];
+        if (!c) return;
+        var oferta = c.pos_cadastro === 'trial'
+          ? (c.dias_trial || 7) + ' dias grátis'
+          : (c.tipo_desconto === 'percentual' ? c.valor_desconto + '% off' : 'R$ ' + c.valor_desconto + ' off');
+        var badge = document.querySelector('.launch-badge');
+        if (badge) {
+          var label = c.headline || ('Oferta especial · ' + oferta);
+          var pulse = badge.querySelector('.pulse');
+          badge.textContent = '';
+          if (pulse) badge.appendChild(pulse);
+          badge.appendChild(document.createTextNode(' ' + label));
+        }
+      })
+      .catch(function () {});
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { wireCtas(); applyMessageMatch(); });
+  } else { wireCtas(); applyMessageMatch(); }
+})();
+</script>
+
 <!-- NAV (minimal: only menu links, no logo, no WA button) -->
 <nav class="top">
   <div class="wrap">
