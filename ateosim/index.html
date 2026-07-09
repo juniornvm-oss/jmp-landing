@@ -576,18 +576,18 @@
 
 <!--
   CHECKOUT DA CAMPANHA (Asaas, via app — não WhatsApp):
-   • Crie a campanha ATEOSIM no app em Cobranças → Campanhas (40% off, válida até dez/2026).
-   • Cole o token gerado em CAMPAIGN_TOKEN abaixo — os CTAs passam a levar direto ao
-     cadastro /c/<token> do app, que aplica o desconto e cobra via Asaas.
-   • Enquanto o token estiver vazio, os CTAs caem no WhatsApp (fallback), como na LP principal.
-   • Para testar sem editar o arquivo: abra a página com ?c=<token>.
+   • Campanha ATEOSIM criada no app (Cobranças → Campanhas): www.jmptreino.com/c/c4f53bee
+   • Os CTAs levam ao cadastro /c/<token> do app, que aplica o desconto e cobra via Asaas.
+   • Se o token for trocado/desativado, atualize CAMPAIGN_TOKEN abaixo; com ele vazio,
+     os CTAs caem no WhatsApp (fallback), como na LP principal.
+   • ?c=<token> na URL da página sobrepõe o token (útil para testar outra campanha).
 -->
 <script>
 (function () {
   "use strict";
   var ATEOSIM_CONFIG = {
-    APP_URL: "https://jmp-treino.vercel.app",
-    CAMPAIGN_TOKEN: "",
+    APP_URL: "https://www.jmptreino.com",
+    CAMPAIGN_TOKEN: "c4f53bee",
     META_PIXEL_ID: "1763485467974691"
   };
 
