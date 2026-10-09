@@ -1,728 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Outubro Rosa 2026 · Junior Mello Treinamentos — avaliação, treino no app e academia</title>
-<meta name="description" content="Exclusivo para mulheres: avaliação física com o Junior Mello, treino guiado no app JM Treino e acesso à academia VS Gold SkyMall, em Londrina. Matrículas até 31/10/2026.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#121115">
+<title>Outubro Rosa 2026 | Junior Mello Treinamentos + VS Gold SkyMall</title>
+<meta name="description" content="Outubro Rosa em Londrina, para mulheres a partir de 18 anos: avaliação física presencial com o Junior Mello, programa de treino individualizado no app JM Treino e acesso à academia VS Gold SkyMall. Matrículas até 31/10/2026.">
 <link rel="canonical" href="https://www.jmtreino.com.br/outubrorosa/">
-<meta name="theme-color" content="#0a0a0a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Junior Mello Treinamentos">
-<meta property="og:title" content="Outubro Rosa: avaliação física, treino no app e academia">
-<meta property="og:description" content="Exclusivo para mulheres: avaliação física com o Junior Mello, treino guiado no app JM Treino e acesso à academia VS Gold SkyMall, em Londrina. Matrículas até 31/10/2026.">
 <meta property="og:url" content="https://www.jmtreino.com.br/outubrorosa/">
+<meta property="og:title" content="Outubro Rosa | Você não precisa gostar de academia para começar">
+<meta property="og:description" content="Avaliação física com o Junior Mello, programa de treino individualizado no app JM Treino e acesso à VS Gold SkyMall, em Londrina. Para mulheres a partir de 18 anos. Matrículas até 31/10/2026.">
 <meta property="og:image" content="https://www.jmtreino.com.br/outubrorosa/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Outubro Rosa da Junior Mello Treinamentos: avaliação física, treino no app e academia. Exclusivo para mulheres.">
+<meta property="og:image:alt" content="Outubro Rosa da Junior Mello Treinamentos: avaliação física, treino no app e academia. Para mulheres.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Outubro Rosa: avaliação física, treino no app e academia">
-<meta name="twitter:description" content="Exclusivo para mulheres: avaliação física com o Junior Mello, treino guiado no app JM Treino e acesso à academia VS Gold SkyMall, em Londrina. Matrículas até 31/10/2026.">
+<meta name="twitter:title" content="Outubro Rosa | Você não precisa gostar de academia para começar">
+<meta name="twitter:description" content="Avaliação física com o Junior Mello, programa de treino individualizado no app JM Treino e acesso à VS Gold SkyMall, em Londrina. Para mulheres a partir de 18 anos. Matrículas até 31/10/2026.">
 <meta name="twitter:image" content="https://www.jmtreino.com.br/outubrorosa/og.jpg">
 <link rel="icon" type="image/png" href="/outubrorosa/favicon.png">
 <link rel="apple-touch-icon" href="/outubrorosa/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0a0a0a;
-    --bg-2: #131113;
-    --card: #181316;
-    --ink: #f4f1ec;
-    --ink-2: #d3cdc5;
-    --ink-3: #aaa39b;
-    --rosa: #f6a9c8;
-    --rosa-claro: #fbd2e2;
-    --rosa-forte: #e0588f;
-    --rosa-tinta: rgba(246, 169, 200, 0.10);
-    --laranja: #f75b2b;
-    --btn-ink: #1a0a12;
-    --linha: rgba(244, 241, 236, 0.12);
-    --linha-rosa: rgba(246, 169, 200, 0.34);
-    --anton: 'Anton', Impact, 'Arial Narrow', sans-serif;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-  body {
-    background:
-      radial-gradient(ellipse 760px 560px at 88% -40px, rgba(246, 169, 200, 0.16), transparent 70%) no-repeat,
-      var(--bg);
-    color: var(--ink);
-    font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
-    font-size: 18px;
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
-  }
-  /* granulado sutil, nunca captura o toque */
-  body::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-    pointer-events: none;
-    z-index: 40;
-  }
-  ::selection { background: var(--rosa); color: var(--btn-ink); }
-  img, svg { display: block; }
-  a { color: inherit; }
-  :focus-visible { outline: 3px solid #ffffff; outline-offset: 3px; }
-
-  .wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 16px; }
-  @media (min-width: 600px) { .wrap { padding: 0 32px; } }
-
-  .display {
-    font-family: var(--anton);
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.005em;
-    line-height: 1.12;
-  }
-  .rotulo {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--rosa-claro);
-  }
-  .rotulo::before { content: ''; width: 24px; height: 2px; background: var(--laranja); flex: none; }
-
-  /* ===== botão ===== */
-  .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    width: 100%;
-    min-height: 60px;
-    padding: 16px 22px;
-    background: var(--rosa);
-    color: var(--btn-ink);
-    font-family: inherit;
-    font-size: 18px;
-    font-weight: 800;
-    letter-spacing: 0.01em;
-    text-decoration: none;
-    text-align: center;
-    border: 0;
-    border-radius: 0;
-    box-shadow: 0 14px 36px -14px rgba(224, 88, 143, 0.7);
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    cursor: pointer;
-  }
-  .btn:hover { background: var(--rosa-claro); }
-  .btn:active { transform: translateY(1px); }
-  .btn svg { width: 20px; height: 20px; flex: none; }
-
-  /* ===== topo ===== */
-  .topo { padding: 8px 0 0; }
-  .topo .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-  .topo img { width: 112px; height: auto; }
-
-  /* ===== hero = a oferta ===== */
-  .hero { position: relative; padding: 10px 0 56px; }
-  .hero-grid { display: grid; gap: 14px; }
-  .hero-texto { position: relative; }
-  .selo {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 12px 6px 9px;
-    border: 1px solid var(--linha-rosa);
-    background: var(--rosa-tinta);
-    color: var(--rosa-claro);
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 0.03em;
-    line-height: 1.3;
-    white-space: nowrap;
-  }
-  .selo svg { width: 14px; height: 20px; flex: none; }
-  @media (max-width: 359px) {
-    .selo .ano { display: none; }
-    .topo img { width: 104px; }
-    .oferta .rotulo { font-size: 14px; letter-spacing: 0.04em; }
-    .oferta .rotulo::before { display: none; }
-    .oferta .preco .val { font-size: 52px; }
-    .oferta .preco .mes { font-size: 19px; }
-  }
-  @media (max-width: 459px) {
-    .oferta .rotulo { letter-spacing: 0.03em; }
-    .oferta .rotulo::before { display: none; }
-    .oferta .preco { margin: 2px 0 8px; }
-    .lede { font-size: 17px; }
-  }
-  @media (max-width: 374px) {
-    .hero .oferta { padding-left: 14px; padding-right: 14px; }
-    .wrap .btn { padding-left: 12px; padding-right: 12px; gap: 8px; font-size: 17px; letter-spacing: 0; }
-  }
-  .hero h1 { font-size: clamp(34px, 9.3vw, 76px); line-height: 1.27; }
-  .hero h1 span { display: block; }
-  .hero h1 b { color: var(--rosa); font-weight: 400; }
-  .hero h1 .laco-h1 {
-    display: inline-block;
-    width: 0.8em;
-    height: 1.12em;
-    margin: 0 0 -0.12em 0.24em;
-    vertical-align: baseline;
-  }
-  .lede { margin-top: 8px; font-size: 18px; color: var(--ink-2); max-width: 30em; }
-  .lede strong { color: var(--ink); font-weight: 700; }
-
-  .oferta {
-    position: relative;
-    background: linear-gradient(180deg, #1d1619 0%, #151114 100%);
-    border: 1px solid var(--linha-rosa);
-    box-shadow: 0 40px 90px -40px rgba(224, 88, 143, 0.45);
-    padding: 13px 18px 18px;
-  }
-  .oferta::before {
-    content: '';
-    position: absolute;
-    left: -1px; right: -1px; top: -1px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--rosa-forte), var(--rosa));
-  }
-  .aviso-encerrada { display: none; }
-  .oferta-topo { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-  .preco {
-    display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-    column-gap: 8px;
-    margin: 4px 0 10px;
-    color: var(--rosa);
-    font-family: var(--anton);
-    line-height: 1;
-  }
-  .preco .rs { font-size: 27px; }
-  .preco .val { font-size: clamp(58px, 17vw, 86px); letter-spacing: 0.01em; }
-  .preco .mes { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 21px; color: var(--ink); }
-  .condicoes { list-style: none; display: grid; gap: 5px; font-size: 17px; line-height: 1.36; }
-  .condicoes li { display: grid; grid-template-columns: 20px 1fr; gap: 10px; align-items: start; }
-  .condicoes li::before {
-    content: '';
-    width: 20px; height: 20px;
-    margin-top: 1px;
-    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M4 10.5l4 4 8-9' fill='none' stroke='%23f6a9c8' stroke-width='2.6' stroke-linecap='square'/></svg>") center / 20px no-repeat;
-  }
-  .condicoes strong { font-weight: 800; }
-  .oferta .btn { margin-top: 12px; min-height: 58px; }
-  .prazo {
-    display: flex;
-    align-items: flex-start;
-    gap: 9px;
-    margin-top: 14px;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.4;
-  }
-  .prazo svg { width: 20px; height: 20px; flex: none; margin-top: 1px; color: var(--rosa); }
-  .falta { color: var(--rosa); white-space: nowrap; }
-  .garantia { margin-top: 6px; padding-left: 29px; font-size: 16px; color: var(--ink-2); line-height: 1.45; }
-  .oferta .whats { margin-top: 2px; padding-left: 29px; }
-
-  @media (min-width: 920px) {
-    .topo { padding-top: 26px; }
-    .topo img { width: 150px; }
-    .hero { padding: 40px 0 104px; }
-    .hero h1 { line-height: 1.27; }
-    .condicoes { gap: 9px; line-height: 1.42; }
-    .oferta .btn { margin-top: 18px; min-height: 60px; }
-    .hero-grid { grid-template-columns: minmax(0, 1fr) 452px; gap: 64px; align-items: center; }
-    .lede { font-size: 19px; max-width: 24em; }
-    .oferta { padding: 30px 30px 26px; }
-  }
-
-  /* ===== seções ===== */
-  .secao { padding: 64px 0; position: relative; }
-  @media (min-width: 920px) { .secao { padding: 96px 0; } }
-  .secao h2 { font-size: clamp(36px, 9.4vw, 58px); margin: 14px 0 26px; }
-
-  /* incluído */
-  .incluido { background: var(--bg-2); border-top: 1px solid var(--linha); border-bottom: 1px solid var(--linha); }
-  .incluido-grid { display: grid; gap: 28px; }
-  .itens { list-style: none; display: grid; gap: 14px; }
-  .item {
-    display: grid;
-    grid-template-columns: 48px 1fr;
-    align-items: center;
-    column-gap: 14px;
-    row-gap: 12px;
-    padding: 20px 18px;
-    background: var(--bg);
-    border: 1px solid var(--linha);
-  }
-  .item .icone {
-    width: 48px; height: 48px;
-    display: grid; place-items: center;
-    background: var(--rosa-tinta);
-    border: 1px solid var(--linha-rosa);
-    color: var(--rosa);
-  }
-  .item .icone svg { width: 24px; height: 24px; }
-  .item h3 { font-size: 19px; font-weight: 800; line-height: 1.25; }
-  .item p { grid-column: 1 / -1; font-size: 16px; color: var(--ink-2); }
-  .nao-incluso {
-    margin-top: 14px;
-    padding: 16px 18px;
-    border: 1px dashed rgba(244, 241, 236, 0.22);
-    font-size: 16px;
-    color: var(--ink-2);
-  }
-  .nao-incluso strong { color: var(--ink); }
-  .celular {
-    width: 190px;
-    margin: 0 auto;
-    padding: 9px;
-    background: linear-gradient(160deg, #2a2427, #141113);
-    border-radius: 36px;
-    box-shadow: 0 30px 70px -30px rgba(224, 88, 143, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-  }
-  .celular img { width: 100%; height: auto; aspect-ratio: 540 / 1110; border-radius: 28px; background: #0d0d0d; }
-  .legenda { margin-top: 12px; text-align: center; font-size: 14px; color: var(--ink-3); }
-  @media (min-width: 920px) {
-    .incluido-grid { grid-template-columns: minmax(0, 1fr) 300px; gap: 64px; align-items: center; }
-    .celular { width: 270px; }
-  }
-
-  /* como funciona */
-  .passos { list-style: none; counter-reset: passo; display: grid; gap: 12px; }
-  .passos li {
-    counter-increment: passo;
-    display: grid;
-    grid-template-columns: 44px 1fr;
-    gap: 16px;
-    align-items: start;
-    align-content: start;
-    padding: 18px 0;
-    border-top: 1px solid var(--linha);
-  }
-  .passos li::before {
-    content: counter(passo);
-    width: 44px; height: 44px;
-    display: grid; place-items: center;
-    background: var(--rosa);
-    color: var(--btn-ink);
-    font-family: var(--anton);
-    font-size: 24px;
-    line-height: 1;
-  }
-  .passos strong { display: block; font-size: 19px; font-weight: 800; line-height: 1.3; margin-bottom: 4px; }
-  .passos span { display: block; font-size: 16px; color: var(--ink-2); }
-  .acolhe { margin: -10px 0 22px; font-size: 18px; color: var(--ink-2); max-width: 38em; }
-  .cta-meio { margin-top: 28px; display: grid; gap: 12px; }
-  .cta-meio p { font-size: 16px; color: var(--ink-2); }
-  @media (min-width: 920px) {
-    .passos { grid-template-columns: repeat(4, 1fr); gap: 28px; }
-    .passos li { grid-template-columns: 1fr; gap: 14px; padding-top: 24px; }
-    .cta-meio { grid-template-columns: 360px 1fr; align-items: center; gap: 24px; }
-  }
-
-  /* cuidado */
-  .cuidado {
-    background:
-      radial-gradient(ellipse 60% 60% at 100% 0%, rgba(246, 169, 200, 0.12), transparent 70%),
-      #120e10;
-    border-top: 1px solid var(--linha-rosa);
-    border-bottom: 1px solid var(--linha-rosa);
-    overflow: clip;
-  }
-  .cuidado-topo { position: relative; padding-right: 66px; }
-  .cuidado-topo .laco-cuidado { position: absolute; right: 0; top: 0; width: 54px; }
-  .cuidado .intro { font-size: 18px; color: var(--ink-2); max-width: 36em; }
-  .blocos { display: grid; gap: 14px; margin-top: 26px; }
-  .bloco { padding: 20px 18px; background: rgba(10, 10, 10, 0.55); border: 1px solid var(--linha); }
-  .bloco h3 { font-size: 19px; font-weight: 800; color: var(--rosa-claro); line-height: 1.3; margin-bottom: 8px; }
-  .bloco p { font-size: 17px; color: var(--ink-2); }
-  .bloco q { color: var(--ink); quotes: '“' '”'; }
-  .aviso {
-    margin-top: 22px;
-    padding: 16px 18px;
-    border-left: 4px solid var(--rosa);
-    background: rgba(246, 169, 200, 0.09);
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.5;
-  }
-  .sem-doacao { margin-top: 14px; font-size: 16px; color: var(--ink-2); }
-  .fontes { margin-top: 14px; font-size: 14px; color: var(--ink-3); line-height: 1.5; }
-  @media (min-width: 920px) {
-    .blocos { grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .cuidado-topo .laco-cuidado { width: 88px; }
-    .cuidado-topo { padding-right: 120px; }
-  }
-
-  /* dúvidas */
-  .faq { max-width: 820px; }
-  .faq details { border-top: 1px solid var(--linha); }
-  .faq details:last-of-type { border-bottom: 1px solid var(--linha); }
-  .faq summary {
-    list-style: none;
-    cursor: pointer;
-    min-height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 16px 0;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.35;
-  }
-  .faq summary::-webkit-details-marker { display: none; }
-  .faq summary::after {
-    content: '';
-    flex: none;
-    width: 16px; height: 16px;
-    background:
-      linear-gradient(var(--rosa), var(--rosa)) center / 16px 2px no-repeat,
-      linear-gradient(var(--rosa), var(--rosa)) center / 2px 16px no-repeat;
-    transition: transform 0.2s ease;
-  }
-  .faq details[open] summary::after { transform: rotate(45deg); }
-  .faq .resp { padding: 0 0 22px; font-size: 17px; color: var(--ink-2); max-width: 44em; }
-  .faq .resp p + p { margin-top: 10px; }
-  .faq .resp a { color: var(--rosa); font-weight: 700; text-underline-offset: 3px; }
-
-  /* fecho */
-  .final { text-align: left; }
-  .final-card {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 26px 18px 22px;
-    border: 1px solid var(--linha-rosa);
-    background: linear-gradient(180deg, #1d1619 0%, #151114 100%);
-  }
-  .final h2 { margin: 12px 0 10px; }
-  .final .resumo { font-size: 18px; color: var(--ink); }
-  .final .preco-final { margin-top: 4px; font-family: var(--anton); font-size: 48px; line-height: 1.05; color: var(--rosa); letter-spacing: 0.01em; }
-  .final .preco-final span { margin-left: 6px; font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 19px; color: var(--ink); }
-  .final .cond { margin-top: 10px; font-size: 16px; color: var(--ink-2); }
-  .final .btn { margin-top: 20px; }
-  .whats {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    min-height: 48px;
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--ink);
-    text-decoration: underline;
-    text-decoration-color: var(--linha-rosa);
-    text-underline-offset: 4px;
-  }
-  .whats svg { width: 20px; height: 20px; color: var(--rosa); flex: none; }
-  @media (min-width: 920px) { .final-card { padding: 40px 44px 34px; } }
-
-  /* rodapé */
-  .rodape { padding: 44px 0 56px; border-top: 1px solid var(--linha); font-size: 15px; color: var(--ink-3); line-height: 1.6; }
-  .rodape img { width: 190px; height: auto; margin-bottom: 18px; }
-  .rodape p + p { margin-top: 6px; }
-  .rodape strong { color: var(--ink-2); font-weight: 700; }
-  .rodape a { color: var(--ink-2); text-underline-offset: 3px; }
-  .rodape a.alvo { min-height: 48px; display: inline-flex; align-items: center; }
-  .rodape .letras { margin-top: 16px; }
-
-  /* campanha encerrada (o script liga a classe) */
-  html.encerrada .aviso-encerrada {
-    display: block;
-    margin: 0 0 14px;
-    padding: 12px 14px;
-    background: var(--rosa);
-    color: var(--btn-ink);
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 1.4;
-  }
-  html.encerrada .so-aberta,
-  html.encerrada .falta { display: none !important; }
-
-  /* entrada suave só quando o movimento é bem-vindo */
-  @media (prefers-reduced-motion: no-preference) {
-    .laco-desenho { stroke-dasharray: 420; stroke-dashoffset: 420; animation: desenhar 1.6s 0.2s cubic-bezier(0.6, 0, 0.2, 1) forwards; }
-    @keyframes desenhar { to { stroke-dashoffset: 0; } }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after { animation: none !important; transition: none !important; }
-  }
+:root{--bg:#121115;--bg2:#1b191d;--gray:#969099;--ink:#f6f0ec;--rose:#eab0c2;--rose2:#ffe1eb;--hot:#da85a5;--terra:#bb4a2f;--terra2:#d45d3e;--gold:#dfbb70;--line:rgba(255,255,255,.12);--content:1160px}
+*,*:before,*:after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:98px}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit}button,input,select{font:inherit}button{cursor:pointer}img{max-width:100%;display:block}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--rose);outline-offset:4px}::selection{background:var(--rose);color:var(--bg)}.wrap{width:min(calc(100% - 48px),var(--content));margin:auto}.over{font-weight:800;letter-spacing:.2em;font-size:11px;text-transform:uppercase;color:var(--rose)}.display{font:400 clamp(43px,6.6vw,90px)/1.04 Anton,Impact,sans-serif;letter-spacing:.006em;text-transform:uppercase;margin:0}.muted{color:#b5abb0}.small{font-size:13px;color:#aaa0a7;line-height:1.7}.ribbon{width:23px;height:31px;flex:none;vertical-align:middle;fill:var(--rose)}.ribbon.gold{fill:var(--gold)}.ribbon.terra{fill:var(--terra2)}.ribbon-point{display:flex;gap:13px;align-items:flex-start}.ribbon-point .ribbon{width:20px;height:27px;margin-top:1px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;font-weight:800;font-size:13px;letter-spacing:.035em;padding:17px 25px;min-height:56px;border-radius:9px;border:1px solid transparent;transition:.18s transform,.18s background;white-space:normal;text-align:center}.btn:hover{transform:translateY(-2px)}.btn.primary{background:var(--terra);color:#fff;box-shadow:0 9px 35px rgba(198,68,37,.18)}.btn.primary:hover{background:var(--terra2)}.btn.line{border-color:rgba(255,255,255,.3);background:rgba(0,0,0,.12)}.btn.arrow:after{content:'↗';font-size:19px;font-weight:400}.section{padding:100px 0}.section-head{max-width:810px}.section-head p:last-child{font-size:16px;line-height:1.8;color:#bcb2b9}.divider{border:0;border-top:1px solid var(--line);margin:0}.serif{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:400;text-transform:none;color:var(--rose2)}
+/* Header */
+header{height:86px;position:sticky;top:0;z-index:40;background:rgba(17,16,19,.91);border-bottom:1px solid rgba(234,176,194,.16);backdrop-filter:blur(18px)}.header-in{display:flex;align-items:center;justify-content:space-between;height:100%;gap:25px}.brands{display:flex;align-items:center;gap:20px;min-width:0}.brand-jm{display:flex;align-items:center;gap:10px;text-decoration:none}.brand-jm .mark{display:block;width:54px;height:35px;object-fit:contain;flex:none}.brand-jm .label{font-size:10px;font-weight:800;line-height:1.4;letter-spacing:.06em;max-width:115px}.brand-sep{height:30px;width:1px;background:rgba(255,255,255,.21)}.brand-vs{display:flex;align-items:center;gap:7px;text-decoration:none;white-space:nowrap}.brand-vs img{height:42px;width:107px;object-fit:contain;mix-blend-mode:screen}.sky{font-size:10px;font-weight:900;letter-spacing:.18em;color:var(--gold)}.nav{display:flex;align-items:center;gap:26px}.nav a{font-size:12px;text-decoration:none;font-weight:700;color:#ccc2c8}.nav a:not(.btn):hover{color:white}.nav .btn{min-height:42px;padding:10px 18px;color:white}
+/* Hero */
+.hero{position:relative;overflow:hidden;min-height:660px;display:flex;align-items:center;padding:75px 0 82px;background:radial-gradient(circle at 80% 41%,rgba(192,66,98,.20),transparent 41%),radial-gradient(circle at 31% 118%,rgba(169,68,39,.12),transparent 50%),linear-gradient(140deg,#1b181c,#100f12 62%)}.hero:before{content:'';position:absolute;inset:0;opacity:.12;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.05) 3px,transparent 4px)}.hero-grid{display:grid;grid-template-columns:1.17fr .83fr;align-items:center;gap:20px;position:relative;z-index:1}.hero-copy{position:relative;z-index:2}.eyebrow{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(234,176,194,.32);background:rgba(234,176,194,.07);padding:7px 13px;border-radius:100px;color:#f4c7d5;text-transform:uppercase;font-size:10px;letter-spacing:.16em;font-weight:800}.eyebrow .ribbon{width:14px;height:20px}.hero h1{margin:28px 0 23px;font:400 clamp(55px,6.5vw,97px)/1.04 Anton,Impact,sans-serif;letter-spacing:0;max-width:780px;text-transform:uppercase}.hero h1 em{font-style:normal;color:var(--rose)}.hero-desc{max-width:530px;font-size:17px;line-height:1.78;color:#d0c4cb;margin:0 0 29px}.hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px}.hero-note{margin-top:19px;display:flex;align-items:center;gap:9px;font-size:11px;color:#c2b2bd}.hero-note .ribbon{width:13px;height:19px}.visual{position:relative;min-height:540px;isolation:isolate}.ring{position:absolute;inset:5% -14% 7% 8%;border:1px solid rgba(240,178,200,.18);border-radius:50%;transform:rotate(-16deg)}.ring:before{content:'';position:absolute;inset:10%;border:1px solid rgba(240,178,200,.09);border-radius:50%}.mega-ribbon{position:absolute;top:5%;right:-7%;height:82%;max-width:100%;width:450px;fill:none;stroke:#e7a9bb;stroke-width:28;stroke-linecap:round;opacity:.15;filter:drop-shadow(0 0 28px #d85f8a);transform:rotate(8deg)}.phone{position:absolute;right:15%;top:3%;width:min(72%,300px);height:492px;background:#030303;border:5px solid #373136;border-radius:36px;box-shadow:18px 38px 68px rgba(0,0,0,.65),0 0 0 1px #9b7462;overflow:hidden;transform:rotate(6deg)}.phone:before{content:'';position:absolute;height:16px;width:32%;top:0;left:34%;border-radius:0 0 12px 12px;background:#030303;z-index:5}.phone img{height:100%;width:100%;object-fit:cover;object-position:top}.floating-note{position:absolute;left:-5%;bottom:12%;width:228px;border:1px solid rgba(240,178,200,.26);background:rgba(30,25,29,.93);backdrop-filter:blur(12px);padding:20px 19px;box-shadow:0 26px 50px rgba(0,0,0,.38);border-radius:8px}.floating-note strong{display:block;font:36px/1 Anton;color:var(--rose)}.floating-note span{font-size:12px;color:#cfc1ca;line-height:1.5}.micro-badge{position:absolute;right:-5%;top:13%;width:130px;border-radius:50%;aspect-ratio:1;background:#34242d;border:1px solid rgba(255,218,230,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(12deg);box-shadow:0 17px 40px #0009}.micro-badge strong{font:36px/.9 Anton;color:var(--rose)}.micro-badge span{font-size:10px;text-align:center;line-height:1.4;padding-top:9px;letter-spacing:.04em;color:#f2d4dd}
+/* main story */
+.thought{background:#eee4df;color:#262027;position:relative;overflow:hidden}.thought:after{content:'';position:absolute;right:-100px;top:-40px;width:360px;height:360px;border-radius:50%;border:65px solid rgba(196,72,54,.06)}.thought .over{color:#a3465e}.thought .display{font-size:clamp(41px,5vw,68px)}.thought .display span{color:#aa455d}.thought-grid{display:grid;grid-template-columns:.94fr 1.06fr;gap:74px;align-items:center}.thought-lead{font-size:21px;line-height:1.58;font-weight:700;max-width:530px;margin:0 0 20px}.thought-copy{font-size:15px;line-height:1.88;color:#655b61;margin:0}.comfort{display:grid;gap:0;border-top:1px solid #d6c8c7}.comfort>div{padding:20px 0;border-bottom:1px solid #d6c8c7;display:flex;align-items:flex-start;gap:15px}.comfort .ribbon{fill:#b66c86}.comfort strong{font-size:14px;display:block;margin-bottom:3px}.comfort span{font-size:13px;line-height:1.5;color:#655a60;display:block}
+/* approach */
+.approach{background:linear-gradient(180deg,#17151a,#211b1f)}.approach .display{max-width:790px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:42px}.step{border:1px solid var(--line);padding:29px 22px 32px;background:linear-gradient(135deg,rgba(255,255,255,.035),rgba(255,255,255,.005));min-height:282px;border-radius:6px}.step .number{font:38px/1 Anton;color:#845c62;letter-spacing:-.02em;display:block;margin-bottom:28px}.step .ribbon{width:18px;height:24px;margin-bottom:10px}.step h3{font-size:17px;margin:0 0 11px}.step p{color:#aca2a8;font-size:13px;line-height:1.75;margin:0}.approach-foot{display:flex;justify-content:space-between;align-items:center;gap:24px;border-top:1px solid var(--line);margin-top:33px;padding-top:27px}.approach-foot p{font-size:15px;color:#d4c5cb;max-width:650px;margin:0;line-height:1.7}
+/* app */
+.app-section{background:#121014;overflow:hidden}.app-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:60px;align-items:center}.app-list{display:grid;gap:18px;margin:27px 0 34px}.app-list .ribbon-point span{font-size:14px;line-height:1.65;color:#d1c6cc}.app-demo{display:flex;align-items:center;justify-content:center;min-height:570px;position:relative;gap:10px}.app-demo:before{content:'';position:absolute;inset:7% 8% 3%;background:radial-gradient(ellipse,rgba(202,96,73,.26),transparent 69%);filter:blur(12px)}.screen{position:relative;width:31.4%;border:3px solid #393039;border-radius:20px;overflow:hidden;background:#080809;box-shadow:0 22px 48px rgba(0,0,0,.6)}.screen img{width:100%;height:410px;object-fit:cover;object-position:top}.screen:nth-child(2){width:37%;z-index:1;transform:translateY(-15px);border-color:#8c5448}.screen:nth-child(2) img{height:482px}.screen-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(8,8,10,.94) 34%);padding:37px 8px 15px;text-align:center;font-size:11px;font-weight:800;color:#ffe6e3}.app-footnote{text-align:center;font-size:11px;color:#9e8995;margin:15px 0 0}
+/* scientific */
+.science{background:#f4e9e7;color:#2a2229}.science .over{color:#a8516c}.science .muted{color:#63565e}.science .display{font-size:clamp(42px,5.1vw,70px)}.science-stats{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}.stat{border:1px solid #dcc9cd;background:#fff9f7;padding:34px 31px 29px;border-radius:8px}.stat-top{font-weight:800;text-transform:uppercase;font-size:10px;letter-spacing:.16em;color:#a2576c;display:flex;align-items:center;gap:10px}.stat-top .ribbon{width:17px;height:24px;fill:#be7790}.stat strong{font:clamp(55px,6vw,84px)/1.18 Anton;color:#a94f6a;display:block;margin:18px 0 7px}.stat h3{font-size:18px;margin:0 0 14px;line-height:1.5}.stat p{font-size:13px;color:#756971;line-height:1.8;margin:0}.stat a,.science-footer a{color:#a54c64;text-decoration-color:#dbb8c4;text-underline-offset:3px}.stat a{display:inline-block;font-size:12px;font-weight:800;margin-top:18px}.science-footer{border-top:1px solid #dcc9cd;margin-top:29px;padding-top:23px;display:flex;gap:20px;align-items:flex-start}.science-footer .ribbon{fill:#b66982}.science-footer p{font-size:13px;line-height:1.75;margin:0;color:#5f555d}
+/* offer */
+.offer{background:radial-gradient(circle at 75% 20%,rgba(188,73,51,.17),transparent 45%),#161115}.offer-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px;align-items:center}.offer .display{font-size:clamp(50px,5.6vw,82px)}.offer-copy{font-size:16px;line-height:1.85;color:#c7b8c2;margin:22px 0 32px}.offer-list{display:grid;gap:13px;margin-top:32px}.offer-list .ribbon-point{align-items:center}.offer-list .ribbon-point span{font-size:15px;font-weight:700}.price-card{border:1px solid rgba(242,177,187,.34);border-radius:10px;background:linear-gradient(155deg,#2d2129,#20191e 68%);padding:37px;box-shadow:0 30px 85px rgba(0,0,0,.3);position:relative;overflow:hidden}.price-card:before{content:'';position:absolute;width:210px;height:210px;border:40px solid rgba(238,154,184,.035);border-radius:100%;right:-70px;top:-70px}.price-card .tag{display:inline-block;border:1px solid rgba(237,170,196,.5);background:rgba(227,142,173,.1);color:#f9c1d0;padding:8px 14px;border-radius:100px;font-size:10px;font-weight:900;letter-spacing:.12em}.price-card .price-label{color:#b6a5ae;font-weight:700;font-size:13px;margin:35px 0 0}.price{display:flex;align-items:baseline;gap:8px;margin:9px 0 7px;white-space:nowrap}.price strong{font:clamp(58px,6vw,87px)/1 Anton;color:#fff}.price span{font-size:14px;color:#c3b0bb}.price-card .explain{font-size:13px;color:#c7bbc2;line-height:1.7;margin:0 0 26px}.price-card .btn{width:100%}.price-card .foot{font-size:11px;color:#95858e;text-align:center;line-height:1.6;margin:16px 0 0}
+/* lead */
+.lead{background:#f4eae6;color:#2b2229}.lead-in{display:grid;grid-template-columns:1fr .92fr;gap:80px;align-items:center}.lead .over{color:#a75570}.lead .display{font-size:clamp(45px,5vw,70px)}.lead p{color:#63565e;font-size:15px;line-height:1.8}.lead-form{background:white;border:1px solid #e1d1d4;border-radius:12px;padding:33px;box-shadow:0 18px 50px #38212e13}.lead-form label{display:block;font-size:12px;font-weight:900;color:#61555d;margin-bottom:8px}.lead-form input,.lead-form select{width:100%;padding:15px;border:1px solid #d7c9ce;border-radius:7px;background:#fcf9f8;color:#2b2229;min-height:53px;outline:none}.lead-form input:focus,.lead-form select:focus{border-color:var(--terra)}.field{margin-bottom:18px}.lead-form .btn{width:100%}.lead-form small{display:block;font-size:10px;line-height:1.7;color:#887881;margin-top:15px}
+/* faq */
+.faq{background:#151216}.faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:95px}.faq .display{font-size:clamp(41px,4.8vw,68px)}.faq-list{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line);padding:21px 4px}summary{cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;list-style:none;font-weight:800;font-size:15px;line-height:1.5}summary::-webkit-details-marker{display:none}summary:after{content:'+';font-size:24px;font-weight:400;color:var(--rose)}details[open] summary:after{content:'−'}details p{color:#b6a8b1;font-size:13px;line-height:1.85;margin:12px 28px 4px 0}
+/* footer */
+.final-banner{text-align:center;background:radial-gradient(circle at 50% 110%,rgba(220,103,145,.16),transparent 65%),#221922;border-top:1px solid var(--line);padding:75px 20px}.final-banner .ribbon{width:44px;height:60px;margin-bottom:17px}.final-banner h2{margin:0 auto 20px;font:400 clamp(43px,5.2vw,73px)/1.08 Anton;max-width:770px}.final-banner p{max-width:580px;margin:0 auto 23px;font-size:15px;line-height:1.8;color:#cbbbc5}.footer{padding:36px 0 90px}.footer-grid{display:flex;justify-content:space-between;gap:35px;align-items:center}.footer-brand{display:flex;align-items:center;gap:15px}.footer-brand .mark{color:#e16944;font:34px Anton}.footer-brand span{font-size:11px;color:#bdb1b9;line-height:1.7}.footer-info{font-size:11px;color:#92868c;max-width:560px;line-height:1.75;text-align:right}.mobile-bar{display:none}
+@media(max-width:1050px){.nav{gap:14px}.hero-grid{grid-template-columns:1fr .72fr}.visual{min-height:520px}.micro-badge{right:-9%}.thought-grid{gap:40px}.steps{grid-template-columns:repeat(2,1fr)}.step{min-height:245px}.offer-grid,.app-grid{gap:35px}}
+@media(max-width:760px){.wrap{width:min(calc(100% - 34px),570px)}header{height:67px}.brand-jm .mark{width:47px;height:33px}.brand-jm .label{font-size:9px;max-width:86px}.brands{gap:10px}.brand-vs img{height:36px;width:76px}.brand-sep{height:24px}.sky{font-size:8px}.nav{display:none}.hero{min-height:auto;padding:48px 0 55px}.hero-grid{display:flex;flex-direction:column;align-items:stretch;gap:15px}.eyebrow{font-size:9px}.hero h1{font-size:clamp(48px,12.7vw,73px);margin:22px 0 19px;max-width:540px}.hero-desc{font-size:15px;line-height:1.74;max-width:520px}.hero-actions .btn{width:100%}.hero-actions .line{display:none}.hero-note{font-size:10px}.visual{min-height:390px;width:100%;margin-top:5px}.phone{width:220px;height:368px;right:16%;top:8%;border-radius:28px}.floating-note{left:1%;bottom:6%;width:180px;padding:15px}.floating-note strong{font-size:31px}.micro-badge{right:2%;top:5%;width:93px}.micro-badge strong{font-size:28px}.micro-badge span{font-size:8px;padding-top:4px}.ring{inset:3% 3% 5% 3%}.mega-ribbon{width:350px;right:-5%;top:0}.section{padding:71px 0}.display{font-size:clamp(40px,10vw,63px)}.section-head p:last-child{font-size:14px}.thought-grid,.app-grid,.offer-grid,.lead-in,.faq-grid{grid-template-columns:1fr;gap:30px}.thought .display{font-size:clamp(40px,10.2vw,58px)}.thought-lead{font-size:17px}.thought-copy{font-size:14px}.comfort>div{padding:15px 0}.steps{grid-template-columns:1fr 1fr;gap:9px;margin-top:28px}.step{padding:22px 17px;min-height:248px}.step .number{font-size:31px;margin-bottom:24px}.step h3{font-size:15px}.step p{font-size:12px}.approach-foot{display:block}.approach-foot .btn{margin-top:19px;width:100%}.app-grid{gap:0}.app-demo{min-height:auto;margin-top:12px}.screen{width:31.5%}.screen img{height:278px}.screen:nth-child(2) img{height:326px}.screen-label{font-size:9px;padding:25px 6px 10px}.app-footnote{font-size:10px}.science-stats{grid-template-columns:1fr;gap:13px;margin-top:28px}.stat{padding:24px}.stat strong{font-size:65px}.stat h3{font-size:16px}.science-footer{gap:13px}.offer-copy{font-size:14px}.price-card{padding:27px}.price strong{font-size:72px}.lead-form{padding:23px}.lead p{font-size:14px}.faq-grid{gap:23px}.faq-list{margin-top:2px}.final-banner{padding:62px 19px}.final-banner h2{font-size:clamp(43px,10.5vw,67px)}.footer{padding:30px 0 110px}.footer-grid{display:block}.footer-info{text-align:left;margin-top:16px}.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:block;background:rgba(20,17,20,.95);backdrop-filter:blur(13px);border-top:1px solid rgba(236,174,193,.23);padding:9px 14px calc(9px + env(safe-area-inset-bottom))}.mobile-bar .btn{min-height:48px;width:100%;font-size:12px;padding:12px 17px}body{padding-bottom:63px}}
+@media(max-width:380px){.wrap{width:calc(100% - 28px)}.brand-vs img{width:66px}.brand-jm .label{font-size:8px}.brand-vs{gap:4px}.brand-jm .mark{width:40px;height:29px}.hero h1{font-size:46px}.visual{min-height:345px}.phone{height:315px;width:195px;right:12%}.floating-note{width:156px;left:0}.step{min-height:282px;padding:18px 12px}.step h3{font-size:14px}.step p{font-size:11px}.price strong{font-size:58px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+/* campanha: condições reais e encerramento (o script liga html.encerrada depois de 31/10 23h59) */
+.aviso-encerrada{display:none}html.encerrada .aviso-encerrada{display:block}html.encerrada .so-aberta{display:none!important}
+.hero-cond{margin:16px 0 0;font-size:12px;line-height:1.65;color:#cdbdc6;max-width:530px}.hero-cond a{color:var(--rose2);text-underline-offset:3px}
+.nao-inclui{margin:24px 0 0;font-size:12px;line-height:1.7;color:#a99aa3;max-width:520px}
+.price-card .alvo{margin:20px 0 0;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--rose2)}.price-card .alvo+.price-label{margin-top:14px}
+.condicoes{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:9px}.condicoes li{position:relative;padding-left:19px;font-size:13px;line-height:1.55;color:#ddcfd6}.condicoes li:before{content:'';position:absolute;left:2px;top:.52em;width:7px;height:7px;border-radius:50%;background:var(--rose)}.condicoes strong{color:#fff}
+.prazo{margin:0 0 18px;font-size:12px;font-weight:800;letter-spacing:.03em;color:var(--gold)}.prazo .falta{font-weight:600;color:#d8c39f}
+.price-card .aviso-encerrada{font-size:15px;line-height:1.7;color:#ecdde4;margin:26px 0 24px}
+.price-card .alt{display:block;text-align:center;margin:15px 0 0;font-size:13px;font-weight:700;color:var(--rose2);text-underline-offset:3px}
+.final-banner .alvo{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--rose2);margin:0 auto 14px}.final-banner .cond{max-width:780px;font-size:12px;line-height:1.75;color:#bba9b3;margin:0 auto 26px}.final-banner .aviso-encerrada{max-width:580px;margin:0 auto 23px;font-size:15px;line-height:1.8;color:#e4d3dc}.final-banner .alt{display:inline-block;margin-top:18px;font-size:13px;font-weight:700;color:var(--rose2);text-underline-offset:3px}
+.footer-legal{margin-top:12px}.footer-legal a{color:#c9b9c3;text-underline-offset:3px}
+@media(max-width:760px){.hero-cond{font-size:11px}.price-card .alvo{margin-top:16px}.condicoes li{font-size:12.5px}}
+/* revisão: leitura para 40+/50+, toque, foco, celular e campanha encerrada.
+   Vem por último de propósito: sobrepõe o tamanho e o contraste sem mexer no desenho. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.btn{font-size:15px}.btn.primary:hover{background:#a8432a}
+.btn.arrow:after{content:'↗';content:'↗'/''}summary:after{content:'+';content:'+'/''}details[open] summary:after{content:'−';content:'−'/''}
+.thought :focus-visible,.science :focus-visible,.lead :focus-visible{outline-color:#8f3b55}
+.lead-form input,.lead-form select{border-color:#8a7a83}.lead-form input:focus-visible,.lead-form select:focus-visible{outline:3px solid #8f3b55;outline-offset:2px}
+.science .section-head p:last-child{color:#63565e}.science .over,.lead .over{color:#8f3b55}
+.lead-form small{color:#6e616a;font-size:13px}.lead-form label{font-size:14px}.lead-nota{margin:0;font-size:15px}
+.app-intro{font-size:16px;line-height:1.8;margin:22px 0 0}.app-footnote{font-size:13px}
+.hero-note{font-size:13px}.hero-cond{font-size:13px}.nao-inclui{font-size:14px}
+.step p{font-size:15px}.stat p{font-size:15px}.stat-top{font-size:12px}details p{font-size:16px}
+.science-nota{margin:22px 0 0;font-size:15px;line-height:1.7;color:#5f555d}
+.condicoes li{font-size:15px}.price-card .foot{font-size:13px}.price-card .tag{font-size:12px;margin:0}
+.vendedor{margin:0 0 16px;font-size:13px;line-height:1.6;color:#c7bbc2}
+.aviso-pacote{margin:22px 0 0;font-size:16px;line-height:1.8;color:#ecdde4}
+.final-banner .cond{display:grid;text-align:left;max-width:640px;font-size:15px;color:#d4c4cd}.final-banner .cond li{font-size:15px;color:#d4c4cd}
+.footer-info,.footer-brand span{font-size:13px}
+details{padding:0 4px}summary{padding:21px 0;min-height:44px}details p{margin:0 28px 21px 0}
+.stat a,.footer-legal a,.final-banner .alt{display:inline-block;padding:12px 0;min-height:44px}.stat a{margin-top:6px}.price-card .alt{padding:12px 0;min-height:44px;margin-top:4px}.nw{white-space:nowrap}.price-card .tag{border-radius:16px;line-height:1.45}
+.brand-jm,.brand-vs{min-height:44px}.nav .btn{white-space:nowrap}.brand-vs{flex:none}
+.price{flex-wrap:wrap}
+@media(max-width:1000px){.nav a:not(.btn){display:none}}
+@media(max-width:1050px){.footer-grid{display:block}.footer-info{text-align:left;margin-top:16px}}
+@media(max-width:760px){html{scroll-padding-bottom:96px}
+  .hero-desc{font-size:16px;line-height:1.62}.hero-cond{font-size:13px}.hero-note{font-size:13px}.eyebrow{font-size:11px;letter-spacing:.12em}.over{font-size:12px;letter-spacing:.14em}
+  .thought-copy,.comfort span,.section-head p:last-child,.app-list .ribbon-point span,.stat p,.science-footer p,.offer-copy,.price-card .explain,.condicoes li,.nao-inclui,.lead p,details p,.final-banner p,.final-banner .cond li,.app-intro{font-size:16px;line-height:1.65}
+  .comfort strong,.step h3{font-size:17px}.lead-form label{font-size:15px}
+  .steps{grid-template-columns:1fr}.step{min-height:0;padding:22px 20px}.step .number{margin-bottom:14px}.step p{font-size:16px;line-height:1.65}
+  .screen-label{font-size:11px}.micro-badge span{font-size:10px}.brand-jm .label{max-width:none;letter-spacing:.04em}
+  .app-demo{margin-top:28px}
+  .price strong{font-size:62px}
+  .mobile-bar{transition:transform .2s,visibility .2s}.mobile-bar.oculta{transform:translateY(110%);visibility:hidden}
+  .mobile-bar .btn{font-size:15px;letter-spacing:0;gap:8px;padding:10px 12px;min-height:52px}body{padding-bottom:calc(80px + env(safe-area-inset-bottom))}}
+@media(max-width:380px){.step p{font-size:16px}.price strong{font-size:50px}.brand-jm .label{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.mobile-bar{transition:none}}
 </style>
 </head>
 <body>
-
-<!-- O laço do Outubro Rosa, desenhado uma vez e reaproveitado (decorativo). -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs>
-    <linearGradient id="g-laco" gradientUnits="userSpaceOnUse" x1="0" y1="12" x2="0" y2="156">
-      <stop offset="0" stop-color="#fbd2e2"/>
-      <stop offset="0.55" stop-color="#f6a9c8"/>
-      <stop offset="1" stop-color="#e0588f"/>
-    </linearGradient>
-    <symbol id="laco" viewBox="0 0 120 168">
-      <path d="M30 156 C46 128 76 100 78 68 C80 36 72 12 60 12 C48 12 40 36 42 68 C44 100 74 128 90 156" fill="none" stroke="url(#g-laco)" stroke-width="17"/>
-      <path d="M52.6 100.3 C63.3 119.6 79.6 137.8 90 156" fill="none" stroke="#0a0a0a" stroke-width="25" stroke-linecap="round"/>
-      <path d="M44.6 82.1 C52.7 108.4 76.4 132.2 90 156" fill="none" stroke="url(#g-laco)" stroke-width="17"/>
-    </symbol>
-  </defs>
-</svg>
-
-<header class="topo">
-  <div class="wrap">
-    <img src="/outubrorosa/logo-jm.webp" width="400" height="102" alt="Junior Mello Treinamentos" fetchpriority="high">
-    <p class="selo"><svg aria-hidden="true" focusable="false"><use href="#laco"/></svg>Outubro Rosa<span class="ano">&nbsp;2026</span></p>
-  </div>
-</header>
-
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><symbol id="rosa" viewBox="0 0 56 76"><path d="M29 3C17 -4 7 5 10 19c3 15 13 21 20 34 3 7 5 13 6 22l11-9C39 50 28 37 19 26 9 13 15 5 24 12c8 6 8 21 1 38L7 76l10-1 19-26C57 19 47 1 34 2 31 2 29 3 29 3Z"/></symbol></svg>
+<header><div class="wrap header-in"><div class="brands"><a class="brand-jm" href="#inicio" aria-label="Junior Mello Treinamentos, início"><img class="mark" src="/outubrorosa/jm-simbolo.webp" width="54" height="35" alt="Símbolo oficial JM"><span class="label">TREINAMENTOS<br>INDIVIDUALIZADOS</span></a><span class="brand-sep"></span><a class="brand-vs" href="#plano" aria-label="VS Gold SkyMall: ver o programa"><img src="/outubrorosa/vs-gold.webp" alt="Academia VS Gold" width="107" height="42"><span class="sky">SKY<br>MALL</span></a></div><nav class="nav" aria-label="Navegação principal"><a href="#metodo">Como funciona</a><a href="#ciencia">A ciência</a><a href="#plano">O programa</a><a class="btn primary js-checkout" href="https://www.jmtreino.com.br/c/7134c85e" data-rotulo-encerrada="Falar no WhatsApp"><span class="js-rotulo">Quero começar</span> <span aria-hidden="true">↗</span></a></nav></div></header>
 <main>
-
-  <!-- 1 · HERO: a oferta inteira numa tela -->
-  <section class="hero" aria-labelledby="titulo">
-    <!--
-      FOTO REAL DO HERO (futuro): quando houver foto autorizada, coloque-a aqui como
-      <picture> com WebP, width/height e fetchpriority="high", por exemplo:
-        <picture class="hero-foto">
-          <source media="(min-width: 920px)" srcset="/outubrorosa/hero-desktop.webp">
-          <img src="/outubrorosa/hero-mobile.webp" width="900" height="1100" alt="Descrição da foto" fetchpriority="high">
-        </picture>
-      e mantenha o texto operacional (preço, condições, botão) sobre o fundo escuro do cartão.
-    -->
-    <div class="wrap hero-grid">
-      <div class="hero-texto">
-        <h1 id="titulo" class="display">
-          <span>Avaliação física</span>
-          <span><b>+</b> treino no app</span>
-          <span><b>+</b> academia<svg class="laco-h1" viewBox="0 0 120 168" aria-hidden="true" focusable="false"><path class="laco-desenho" d="M30 156 C46 128 76 100 78 68 C80 36 72 12 60 12 C48 12 40 36 42 68 C44 100 74 128 90 156" fill="none" stroke="url(#g-laco)" stroke-width="17"/><path d="M52.6 100.3 C63.3 119.6 79.6 137.8 90 156" fill="none" stroke="#0a0a0a" stroke-width="25" stroke-linecap="round"/><path class="laco-desenho" d="M44.6 82.1 C52.7 108.4 76.4 132.2 90 156" fill="none" stroke="url(#g-laco)" stroke-width="17"/></svg></span>
-        </h1>
-        <p class="lede">Com o <strong>Junior Mello</strong>, pelo app <strong>JM Treino</strong> e na <strong>VS Gold SkyMall</strong>, em Londrina.</p>
-      </div>
-
-      <article class="oferta" aria-label="Oferta Outubro Rosa">
-        <p class="aviso-encerrada" role="status">Campanha encerrada em 31/10. Fale com a equipe no WhatsApp para conhecer os planos atuais.</p>
-        <p class="rotulo so-aberta">Para mulheres · a partir de 18 anos</p>
-        <p class="preco so-aberta"><span class="rs">R$</span><span class="val">249,90</span><span class="mes">/mês</span></p>
-        <ul class="condicoes so-aberta">
-          <li><span>No <strong>cartão de crédito</strong>, cobrado todo mês até o cancelamento</span></li>
-          <li><span><strong>1ª cobrança no dia da adesão</strong></span></li>
-          <li><span><strong>Sem taxa de matrícula</strong></span></li>
-          <li><span>Permanência mínima de <strong>3 meses, sem multa</strong></span></li>
-          <li><span><strong>Valor fixo por 12 meses</strong>; depois, reajuste anual pelo IPCA</span></li>
-        </ul>
-        <a class="btn js-checkout" href="https://www.jmtreino.com.br/c/7134c85e" data-rotulo-encerrada="Falar no WhatsApp">
-          <span class="js-rotulo">Quero me matricular</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <p class="prazo so-aberta">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <span><span class="js-prazo">Matrículas até 31 de outubro de 2026</span> <span class="falta js-falta" aria-hidden="true"></span></span>
-        </p>
-        <p class="garantia so-aberta">7 dias para desistir, com devolução integral (direito de arrependimento, CDC art. 49).</p>
-        <a class="whats so-aberta" href="https://wa.me/5543996329538?text=Oi!%20Vi%20a%20campanha%20Outubro%20Rosa%20e%20tenho%20uma%20d%C3%BAvida.">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19l-4 1z"/></svg>
-          Prefere conversar antes? Fale no WhatsApp
-        </a>
-      </article>
-    </div>
-  </section>
-
-  <!-- 2 · O QUE ESTÁ INCLUÍDO -->
-  <section class="secao incluido" aria-labelledby="t-incluido">
-    <div class="wrap incluido-grid">
-      <div>
-        <p class="rotulo">Em detalhe</p>
-        <h2 id="t-incluido" class="display">O que está incluído</h2>
-        <ul class="itens">
-          <li class="item">
-            <span class="icone" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="4" width="14" height="17" rx="1"/><path d="M9 4V2.8h6V4M8.5 11.5l2.2 2.2 4.8-4.9M8.5 17h7"/></svg>
-            </span>
-            <h3>Avaliação física com o Junior Mello</h3>
-            <p>Uma avaliação inicial de treino, presencial: anamnese, composição corporal e avaliação postural. Ela é feita na VS Gold SkyMall depois da matrícula, e a equipe chama você no WhatsApp para agendar.</p>
-          </li>
-          <li class="item">
-            <span class="icone" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6.5" y="2.5" width="11" height="19" rx="2"/><path d="M10.5 18.5h3M9.5 9.5l2 2 3.5-3.5"/></svg>
-            </span>
-            <h3>Treino individual no app JM Treino</h3>
-            <p>Protocolo montado a partir da sua avaliação. No celular, o treino é guiado exercício por exercício, se ajusta à disposição e a eventuais dores do dia e registra a sua progressão.</p>
-          </li>
-          <li class="item">
-            <span class="icone" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5v5M6 7.5v9M18 7.5v9M21 9.5v5M6 12h12"/></svg>
-            </span>
-            <h3>Acesso à academia VS Gold SkyMall</h3>
-            <p>Com a assinatura ativa, nos horários de funcionamento e conforme o regulamento da academia. Avenida Maringá, 1500, Londrina/PR.</p>
-          </li>
-        </ul>
-        <p class="nao-incluso"><strong>A avaliação incluída é uma só:</strong> a inicial, que orienta o seu treino. <strong>Não inclui:</strong> personal trainer exclusivo, acompanhamento presencial em todos os treinos nem plano alimentar.</p>
-      </div>
-      <figure>
-        <div class="celular">
-          <img src="/outubrorosa/app-mobilidade.webp" width="540" height="1110" loading="lazy" decoding="async" alt="Tela do app JM Treino mostrando o próximo bloco do treino, Mobilidade, com três exercícios e o botão Primeiro exercício.">
-        </div>
-        <figcaption class="legenda">Tela do app JM Treino, antes do primeiro exercício.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- 3 · COMO FUNCIONA -->
-  <section class="secao" aria-labelledby="t-como">
-    <div class="wrap">
-      <p class="rotulo">Do clique ao treino</p>
-      <h2 id="t-como" class="display">Como funciona</h2>
-      <p class="acolhe">Ninguém começa sozinha: a equipe chama você no WhatsApp, o Junior Mello faz a sua avaliação e o app guia cada exercício.</p>
-      <ol class="passos">
-        <li><div><strong>Matricule-se pelo link</strong><span>Cadastro e pagamento com cartão de crédito na página do JM Treino. A primeira mensalidade é cobrada no dia.</span></div></li>
-        <li><div><strong>A equipe chama você no WhatsApp</strong><span>Para agendar a sua avaliação física na VS Gold SkyMall.</span></div></li>
-        <li><div><strong>Seu treino chega no app</strong><span>Montado a partir da avaliação e guiado exercício por exercício.</span></div></li>
-        <li><div><strong>Treine na VS Gold SkyMall</strong><span>Nos horários da academia, com a sua progressão registrada no app.</span></div></li>
-      </ol>
-      <div class="cta-meio">
-        <a class="btn js-checkout" href="https://www.jmtreino.com.br/c/7134c85e" data-rotulo-encerrada="Falar no WhatsApp">
-          <span class="js-rotulo">Quero me matricular</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <p class="so-aberta">R$ 249,90/mês no cartão de crédito, cobrado todo mês até o cancelamento · 1ª mensalidade no dia da adesão · sem taxa de matrícula · permanência mínima de 3 meses, sem multa · valor fixo por 12 meses, depois reajuste anual pelo IPCA · matrículas até 31/10/2026.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4 · CUIDADO (conscientização) -->
-  <section class="secao cuidado" aria-labelledby="t-cuidado">
-    <div class="wrap">
-      <div class="cuidado-topo">
-        <p class="rotulo">Conscientização</p>
-        <h2 id="t-cuidado" class="display">Outubro é mês de cuidado</h2>
-        <svg class="laco-cuidado" viewBox="0 0 120 168" aria-hidden="true" focusable="false"><use href="#laco"/></svg>
-      </div>
-      <p class="intro">O Outubro Rosa é um convite para olhar com carinho para a saúde das mamas. Cuidar de si é um gesto de todos os dias, no seu ritmo e sem culpa.</p>
-      <div class="blocos">
-        <div class="bloco">
-          <h3>O movimento faz parte do cuidado</h3>
-          <p>A atividade física está associada a menor risco de câncer de mama: o INCA a inclui entre os hábitos que <q>ajudam a reduzir o risco</q>.</p>
-        </div>
-        <div class="bloco">
-          <h3>Mamografia na idade certa</h3>
-          <p>De 50 a 74 anos, a recomendação é a mamografia de rastreamento a cada dois anos. De 40 a 49 anos, a decisão é tomada em conjunto com o profissional de saúde.</p>
-        </div>
-        <div class="bloco">
-          <h3>Conheça seu corpo</h3>
-          <p>Observar as mamas no dia a dia ajuda a perceber mudanças. Ao notar qualquer alteração, como nódulo, mudança na pele ou no mamilo ou nódulo na axila, procure um serviço de saúde.</p>
-        </div>
-      </div>
-      <p class="aviso">A avaliação física desta campanha é uma avaliação de treino. Ela não substitui consulta médica nem mamografia.</p>
-      <p class="sem-doacao">Esta campanha é de conscientização: ela não envolve doação nem parceria com instituições.</p>
-      <p class="fontes">Fontes: Instituto Nacional de Câncer (INCA), cartilha “Câncer de mama: vamos falar sobre isso?”, 2026; Ministério da Saúde, recomendação de rastreamento por mamografia, setembro de 2025.</p>
-    </div>
-  </section>
-
-  <!-- 5 · DÚVIDAS -->
-  <section class="secao" aria-labelledby="t-duvidas">
-    <div class="wrap"><div class="faq">
-      <p class="rotulo">Antes de decidir</p>
-      <h2 id="t-duvidas" class="display">Dúvidas</h2>
-
-      <details>
-        <summary>O valor muda depois?</summary>
-        <div class="resp">
-          <p>Nos primeiros 12 meses, a mensalidade fica em R$ 249,90, com a assinatura em dia. A partir da 13ª mensalidade, o valor é reajustado uma vez por ano pela variação do IPCA acumulada em 12 meses, só se ela for positiva: se for zero ou negativa, não há reajuste. O novo valor é avisado com 30 dias de antecedência.</p>
-          <p>Depois de 31/10, a oferta fecha para novas matrículas.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Tem fidelidade? Como eu cancelo?</summary>
-        <div class="resp">
-          <p>Há permanência mínima de 3 meses. É um compromisso com o seu treino, e não há multa se você precisar sair antes. O cancelamento é feito na recepção da VS Gold SkyMall ou pelo WhatsApp, e o acesso continua até o fim do mês já pago.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Posso desistir depois de assinar?</summary>
-        <div class="resp"><p>Sim. Em até 7 dias a partir da adesão, você pode desistir com devolução integral do valor pago (direito de arrependimento, CDC art. 49). Basta avisar na recepção da VS Gold SkyMall ou pelo WhatsApp (43) 99632-9538.</p></div>
-      </details>
-
-      <details>
-        <summary>Tem taxa de matrícula?</summary>
-        <div class="resp"><p>Não. Nesta campanha não há taxa de matrícula. O valor é a mensalidade de R$ 249,90, no cartão de crédito.</p></div>
-      </details>
-
-      <details>
-        <summary>O pagamento é só no cartão?</summary>
-        <div class="resp"><p>Sim, só no cartão de crédito, em plano recorrente: a cobrança é mensal e automática. A primeira mensalidade é cobrada no dia da matrícula, e as seguintes, no mesmo dia dos meses seguintes.</p></div>
-      </details>
-
-      <details>
-        <summary>Quando e onde é a avaliação?</summary>
-        <div class="resp"><p>Depois da matrícula, a equipe chama você no WhatsApp para agendar. A avaliação é presencial, com o Junior Mello, na VS Gold SkyMall (Avenida Maringá, 1500, Londrina/PR). Está incluída uma avaliação: a inicial, que orienta o seu treino.</p></div>
-      </details>
-
-      <details>
-        <summary>Posso treinar em qualquer horário? E em outra academia?</summary>
-        <div class="resp"><p>Você treina na VS Gold SkyMall, nos horários de funcionamento e conforme o regulamento da academia; dentro desse horário, você escolhe quando ir. O acesso incluído nesta oferta é o da VS Gold SkyMall.</p></div>
-      </details>
-
-      <details>
-        <summary>Quem pode participar?</summary>
-        <div class="resp"><p>A campanha de outubro foi pensada para mulheres, e a única exigência é ter 18 anos ou mais. Para conhecer os outros planos, <a href="https://wa.me/5543996329538?text=Oi!%20Vi%20a%20campanha%20Outubro%20Rosa%20e%20quero%20conhecer%20os%20outros%20planos.">fale com a equipe no WhatsApp</a>.</p></div>
-      </details>
-
-      <details>
-        <summary>E se eu já for aluna?</summary>
-        <div class="resp"><p>A matrícula por esta página é para novas alunas. Se você já é aluna, <a href="https://wa.me/5543996329538?text=Oi!%20J%C3%A1%20sou%20aluna%20e%20vi%20a%20campanha%20Outubro%20Rosa.">fale com a equipe no WhatsApp</a>.</p></div>
-      </details>
-    </div></div>
-  </section>
-
-  <!-- 6 · FECHO -->
-  <section class="secao final" aria-labelledby="t-final">
-    <div class="wrap">
-      <div class="final-card">
-        <p class="rotulo so-aberta">Para mulheres · a partir de 18 anos</p>
-        <h2 id="t-final" class="display"><span class="js-prazo">Matrículas até 31 de outubro</span></h2>
-        <p class="resumo so-aberta">Avaliação física, treino no app e academia por</p>
-        <p class="preco-final so-aberta">R$ 249,90<span>/mês</span></p>
-        <p class="cond so-aberta">No cartão de crédito, cobrado todo mês até o cancelamento · 1ª mensalidade no dia da adesão, as outras no mesmo dia de cada mês · sem taxa de matrícula · permanência mínima de 3 meses, sem multa · cancelamento na recepção ou pelo WhatsApp, com acesso até o fim do mês já pago · valor fixo por 12 meses, depois reajuste anual pelo IPCA · matrículas até 31/10/2026.</p>
-        <a class="btn js-checkout" href="https://www.jmtreino.com.br/c/7134c85e" data-rotulo-encerrada="Falar no WhatsApp">
-          <span class="js-rotulo">Quero me matricular</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a class="whats" href="https://wa.me/5543996329538?text=Oi!%20Vi%20a%20campanha%20Outubro%20Rosa%20e%20tenho%20uma%20d%C3%BAvida.">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19l-4 1z"/></svg>
-          Dúvidas? Fale no WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
-
+<section class="hero" id="inicio"><div class="wrap hero-grid"><div class="hero-copy"><div class="eyebrow"><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg> Outubro Rosa · 2026 · Londrina</div><h1>VOCÊ NÃO PRECISA <em>GOSTAR DE ACADEMIA</em> PARA COMEÇAR.</h1><p class="hero-desc">Precisa se sentir acolhida, entender o que fazer e saber que o seu treino foi feito para você. Um programa pensado especialmente para mulheres 40+ e 50+ — e aberto a todas a partir de 18 anos — que querem transformar a musculação em qualidade de vida.</p><div class="hero-actions"><a class="btn primary arrow js-checkout" href="https://www.jmtreino.com.br/c/7134c85e" data-rotulo-encerrada="Ver os planos atuais no WhatsApp"><span class="js-rotulo">Quero me matricular</span></a><a class="btn line" href="#plano">Conhecer o programa completo</a></div><p class="aviso-encerrada hero-cond" role="status">A campanha Outubro Rosa encerrou em 31/10/2026.</p><p class="hero-cond so-aberta">Para mulheres a partir de 18 anos · R$&nbsp;249,90/mês no cartão de crédito · sem taxa de matrícula · matrículas até 31/10/2026 · <a href="#plano">ver todas as condições</a></p><div class="hero-note"><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg> Movimento como parte do cuidado. Exercício não substitui tratamento nem exames médicos.</div></div><div class="visual"><div class="ring"></div><svg class="mega-ribbon" viewBox="0 0 56 76" aria-hidden="true"><use href="#rosa"/></svg><div class="phone"><img src="/outubrorosa/app-lista-de-exercicios.webp" alt="App JM Treino mostra os cartões com os exercícios de musculação do treino" width="530" height="1148" decoding="async"></div><div class="floating-note"><strong>+20 ANOS</strong><span>de experiência do Junior Mello, que faz a sua avaliação.</span></div><div class="micro-badge"><strong>40+</strong><span>O SEU RITMO.<br>O SEU COMEÇO.</span></div></div></div></section>
+<section class="thought section"><div class="wrap thought-grid"><div><p class="over">Mais do que Outubro Rosa</p><h2 class="display">O PROBLEMA NÃO É A MUSCULAÇÃO.<br><span>É COMEÇAR SEM DIREÇÃO.</span></h2></div><div><p class="thought-lead">Você não precisa conhecer aparelhos, levantar grandes cargas ou gostar do ambiente de academia antes de entrar.</p><p class="thought-copy">É comum achar que academia é um lugar para quem já sabe treinar. Aqui, o processo foi pensado justamente para quem nunca se identificou com esse ambiente — ou tentou, não se adaptou e desistiu.</p><div class="comfort" style="margin-top:24px"><div><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><div><strong>Você chega como está.</strong><span>Sem cobranças para acompanhar o ritmo de outras pessoas.</span></div></div><div><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><div><strong>O treino se ajusta a você.</strong><span>À sua experiência, ao seu tempo e à sua evolução.</span></div></div><div><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><div><strong>Você tem com quem contar.</strong><span>Na avaliação, você conversa com o Junior Mello. No treino, o app conduz cada exercício. E a equipe da VS Gold SkyMall está por perto.</span></div></div></div></div></div></section>
+<section class="approach section" id="metodo"><div class="wrap"><div class="section-head"><p class="over">Um caminho possível, sem adivinhação</p><h2 class="display">QUATRO APOIOS.<br><span class="serif">Um novo jeito de treinar.</span></h2><p>Não é comprar o acesso e descobrir sozinha o que fazer. É entrar em uma estrutura com começo, direção e continuidade.</p></div><div class="steps"><article class="step"><span class="number">01</span><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><h3>Avaliação física</h3><p>Uma avaliação presencial com o Junior Mello, na VS Gold SkyMall, marcada para até 15 dias depois do primeiro pagamento. Ele escuta sua história, suas necessidades e seu ponto de partida antes de definir o programa.</p></article><article class="step"><span class="number">02</span><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><h3>Programa individualizado</h3><p>Montado a partir da sua avaliação. O treino tem uma lógica: cada exercício está ali por um motivo, sem improviso.</p></article><article class="step"><span class="number">03</span><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><h3>Treino guiado no app</h3><p>No app JM Treino, a sessão é conduzida exercício por exercício, para você saber o próximo passo durante o treino.</p></article><article class="step"><span class="number">04</span><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><h3>Uma academia que recebe você</h3><p>Acesso à VS Gold SkyMall, nos horários e regras da unidade, com a equipe da academia por perto.</p></article></div><div class="approach-foot"><p>Uma avaliação que orienta a prescrição. Um programa feito para você. Um aplicativo que conduz cada sessão. E uma academia que recebe você.</p><a href="#app" class="btn line">Veja como o aplicativo funciona <span aria-hidden="true">↓</span></a></div></div></section>
+<section class="app-section section" id="app"><div class="wrap app-grid"><div><p class="over">Tecnologia com prescrição profissional</p><h2 class="display">A ACADEMIA<br>FICA MAIS LEVE<br>QUANDO VOCÊ<br><span class="serif">Sabe o que fazer.</span></h2><p class="muted app-intro">O aplicativo não é uma lista de exercícios entregue e esquecida. Ele conduz sua sessão e conecta seu treino ao programa montado a partir da sua avaliação.</p><div class="app-list"><div class="ribbon-point"><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><span>A sequência dos exercícios, com foto ou vídeo de execução na maioria deles.</span></div><div class="ribbon-point"><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><span>Registro da carga de cada série para acompanhar sua evolução.</span></div><div class="ribbon-point"><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><span>Uma experiência clara até para quem está começando agora.</span></div></div><a class="btn primary arrow js-checkout" href="https://www.jmtreino.com.br/c/7134c85e" data-rotulo-encerrada="Ver os planos atuais no WhatsApp"><span class="js-rotulo">Quero começar meu programa</span></a></div><div><div class="app-demo"><div class="screen"><img loading="lazy" decoding="async" src="/outubrorosa/app-lista-de-exercicios.webp" alt="App com sequência de exercícios em cartões" width="530" height="1148"><div class="screen-label">Seu treino</div></div><div class="screen"><img loading="lazy" decoding="async" src="/outubrorosa/app-execucao-guiada.webp" alt="App conduzindo exercício de musculação em máquina" width="530" height="1148"><div class="screen-label">Execução guiada</div></div><div class="screen"><img loading="lazy" decoding="async" src="/outubrorosa/app-registro-de-carga.webp" alt="App registrando carga realizada em uma série" width="530" height="1149"><div class="screen-label">Evolução registrada</div></div></div><p class="app-footnote">Telas reais do app JM Treino, apresentadas para demonstrar a experiência. Nem todo exercício tem vídeo.</p></div></div></section>
+<section class="science section" id="ciencia"><div class="wrap"><div class="section-head"><p class="over">Outubro Rosa é informação confiável</p><h2 class="display">O EXERCÍCIO NÃO É A CURA.<br><span style="color:#b05a75">MAS É PARTE DO CUIDADO.</span></h2><p class="muted">A ciência dá motivos concretos para sair do sedentarismo — sem promessas milagrosas e sem abandonar os cuidados médicos.</p></div><div class="science-stats"><article class="stat"><div class="stat-top"><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg> Diretriz · prevenção</div><h3><strong>150–300</strong> minutos semanais de atividade física moderada.</h3><p>É a recomendação para adultos da American Cancer Society. A prática regular está associada à redução do risco de alguns tipos de câncer, incluindo o de mama. O número é uma meta populacional, não uma prescrição idêntica para todas as pessoas.</p><a target="_blank" rel="noopener noreferrer" href="https://www.cancer.org/cancer/risk-prevention/diet-physical-activity/acs-guidelines-nutrition-physical-activity-cancer-prevention.html">Ler recomendação da ACS <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></article><article class="stat"><div class="stat-top"><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg> Meta-análise · após o diagnóstico</div><h3><strong>40%</strong> menor risco relativo de morte por todas as causas, em associação com atividade física.</h3><p>Em 12 estudos observacionais com 39.963 mulheres após diagnóstico de câncer de mama, realizar aproximadamente 150 minutos semanais de exercício aeróbico foi associado a HR 0,60 versus nenhum ou mínimo exercício. Não demonstra que o exercício, por si só, causou essa redução nem significa cura.</p><a target="_blank" rel="noopener noreferrer" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12314521/">Ler a meta-análise (Wilson et al., Cancer Epidemiology, Biomarkers &amp; Prevention, 2025) <span aria-hidden="true">↗</span><span class="sr-only"> (abre em nova aba)</span></a></article></div><p class="science-nota">Esses números vêm de uma diretriz para a população e de estudos com atividade física e exercício aeróbico. Não são resultado desta campanha nem do programa de musculação.</p><div class="science-footer"><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><p>Durante o tratamento oncológico, exercícios aeróbicos e resistidos podem ajudar na fadiga, força e capacidade física quando indicados pela equipe de saúde. A <a href="https://ascopubs.org/doi/10.1200/JCO.22.00687" target="_blank" rel="noopener noreferrer">diretriz ASCO<span class="sr-only"> (abre em nova aba)</span></a> recomenda avaliação e individualização. O programa comercial descrito nesta página não substitui acompanhamento oncológico, rastreamento, diagnóstico ou tratamento médico. A avaliação física desta campanha é uma avaliação de treino: não substitui consulta médica nem a mamografia.</p></div></div></section>
+<section class="offer section" id="plano"><div class="wrap offer-grid"><div><p class="over">Junior Mello Treinamentos + VS Gold SkyMall</p><h2 class="display">NÃO É SÓ<br>UMA ACADEMIA.<br><span class="serif">É ter um caminho.</span></h2><p class="aviso-encerrada aviso-pacote" role="status">A campanha Outubro Rosa incluía a avaliação física, o programa de treino no app JM Treino e o acesso à VS Gold SkyMall. Os planos atuais podem ser diferentes: confira no WhatsApp.</p><p class="offer-copy so-aberta">O acesso à estrutura premium da VS Gold SkyMall, em Londrina, é apenas o começo. Você também recebe a avaliação física com o Junior Mello e um programa de treino feito para você, guiado no app JM Treino, para usar a musculação como ferramenta de saúde e qualidade de vida.</p><div class="offer-list so-aberta"><div class="ribbon-point"><svg class="ribbon gold" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><span>Acesso à VS Gold SkyMall, nos horários e regras da unidade</span></div><div class="ribbon-point"><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><span>Uma avaliação física presencial com o Junior Mello</span></div><div class="ribbon-point"><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><span>Programa de treino individualizado</span></div><div class="ribbon-point"><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><span>Treino guiado no app JM Treino</span></div></div><p class="nao-inclui so-aberta">A avaliação incluída é uma só: a inicial, que orienta o seu programa. Fora dela, não há professor da campanha nos seus treinos: quem conduz a sessão é o app. Não estão incluídos personal trainer nem plano alimentar.</p></div><div class="price-card"><h3 class="tag so-aberta">CONDIÇÃO DA CAMPANHA OUTUBRO ROSA</h3><p class="aviso-encerrada" role="status">A campanha Outubro Rosa encerrou em 31/10/2026. Fale com a equipe no WhatsApp para conhecer os planos atuais.</p><p class="alvo so-aberta">Para mulheres · a partir de 18 anos</p><p class="price-label so-aberta">Tudo isso por</p><div class="price so-aberta"><strong>R$&nbsp;249,90</strong><span>/mês</span></div><p class="explain so-aberta">Um pacote integrado. Um ponto de partida pensado para você. Sem precisar descobrir tudo sozinha.</p><ul class="condicoes so-aberta"><li><strong>No cartão de crédito</strong>, cobrado todo mês até o cancelamento</li><li>1ª mensalidade no dia da adesão, antes da avaliação física; as outras, no mesmo dia de cada mês</li><li><strong>Sem taxa de matrícula</strong></li><li><strong>Sem fidelidade e sem multa de cancelamento</strong>: cancele pelo app, na recepção da VS Gold SkyMall ou pelo WhatsApp <span class="nw">(43) 99632-9538</span>, e o acesso segue até o fim do período já pago. Recomendamos pelo menos 3 meses de treino para ver a evolução</li><li><strong>7 dias para desistir</strong> a partir da 1ª cobrança, com devolução integral (direito de arrependimento, CDC art.&nbsp;49)</li><li>Valor fixo nas 12 primeiras mensalidades; depois, reajuste no máximo uma vez por ano, limitado ao IPCA (só se positivo, com aviso de 30 dias)</li><li>Se cancelar, uma nova matrícula segue os planos e preços da época. Condição pessoal, não cumulativa com outros descontos</li></ul><p class="prazo so-aberta"><span class="js-prazo">Matrículas até 31/10/2026</span> <span class="falta js-falta" aria-hidden="true"></span></p><p class="vendedor so-aberta">Quem vende: SH Academias LTDA (Junior Mello Treinamentos). A VS Gold SkyMall é a academia onde você treina.</p><a class="btn primary arrow js-checkout" href="https://www.jmtreino.com.br/c/7134c85e" data-rotulo-encerrada="Ver os planos atuais no WhatsApp"><span class="js-rotulo">Quero me matricular</span></a><p class="foot so-aberta">Você lê e aceita os termos da campanha no checkout, antes do pagamento.</p><a class="alt so-aberta" href="#comece">Prefere tirar uma dúvida antes? Converse no WhatsApp <span aria-hidden="true">↓</span></a></div></div></section>
+<section class="lead section" id="comece"><div class="wrap lead-in"><div><p class="over">Seu primeiro passo pode ser uma conversa</p><h2 class="display">VOCÊ NÃO PRECISA<br><span style="color:#b45a72">COMEÇAR SOZINHA.</span></h2><p>Ficou com alguma dúvida antes de se matricular? Conte o seu momento e a equipe explica pelo WhatsApp como funcionam a avaliação física com o Junior Mello, o treino no app JM Treino e o acesso à VS Gold SkyMall.</p><div class="ribbon-point"><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><p class="lead-nota">Sem formulário longo. Você será encaminhada diretamente ao WhatsApp da equipe.</p></div></div><form class="lead-form" id="interest" novalidate><div class="field"><label for="first-name">Como podemos chamar você? (opcional)</label><input id="first-name" name="first-name" type="text" maxlength="60" autocomplete="given-name" placeholder="Seu primeiro nome"></div><div class="field"><label for="moment">Qual é seu momento?</label><select id="moment" name="moment"><option value="Quero começar a treinar">Quero começar a treinar</option><option value="Quero voltar a treinar">Quero voltar a treinar</option><option value="Já treino, mas quero um programa feito para mim">Já treino, mas quero um programa feito para mim</option><option value="Quero conhecer a academia e o programa">Quero conhecer a academia e o programa</option></select></div><button type="submit" class="btn primary arrow">Conversar no WhatsApp</button><small>Não solicitamos informações de saúde nesta página. Ao continuar, você abrirá o WhatsApp e poderá decidir se deseja enviar a mensagem preparada.</small></form></div></section>
+<section class="faq section" id="duvidas"><div class="wrap faq-grid"><div><p class="over">Sem dúvidas para começar</p><h2 class="display">PERGUNTAS<br><span class="serif">Frequentes.</span></h2></div><div class="faq-list"><details><summary>Tenho mais de 50 anos e nunca gostei de academia. É para mim?</summary><p>Esse é justamente um dos perfis para os quais o programa foi pensado. A proposta é respeitar sua experiência, começar com avaliação física e construir familiaridade com a musculação sem comparações ou pressão.<span class="so-aberta"> A campanha é aberta a todas as mulheres a partir de 18 anos.</span></p></details><details><summary>Como funciona o treino depois da avaliação?</summary><p>Depois da avaliação presencial com o Junior Mello, você recebe um programa de treino feito para você no app JM Treino. O app conduz cada sessão exercício por exercício, registra a carga de cada série e, ao longo dos meses, sugere as cargas a partir do que você registra. Você treina na VS Gold SkyMall nos horários que escolher, dentro do funcionamento da academia, com a equipe da unidade por perto. Fora da avaliação, não há professor da campanha nos seus treinos: quem conduz a sessão é o app. A campanha não inclui personal trainer. Para treinar com o app, você precisa de um celular com acesso à internet.</p></details><details class="so-aberta"><summary>Quando e onde é a avaliação física?</summary><p>Depois do primeiro pagamento, a equipe chama você no WhatsApp e oferece um horário em até 15 dias. A avaliação é presencial, com o Junior Mello (CREF 017708-G/PR), na VS Gold SkyMall: Avenida Maringá, 1500, Londrina/PR. Está incluída uma avaliação: a inicial, que orienta o seu programa. Ela é uma avaliação de treino e não substitui consulta médica nem a mamografia.</p></details><details class="so-aberta"><summary>O plano inclui a academia VS Gold SkyMall?</summary><p>Sim. Com a assinatura ativa, você tem acesso à VS Gold SkyMall nos horários de funcionamento e conforme o regulamento da academia. O plano também inclui a avaliação física presencial e o programa de treino individualizado no app JM Treino.</p></details><details><summary>Tenho alguma limitação ou estou em tratamento médico. Posso participar?</summary><p>O exercício precisa ser adaptado à sua condição e, quando necessário, autorizado pela equipe médica. Em caso de câncer em tratamento ou recuperação, o acompanhamento oncológico continua indispensável. Busque a liberação médica antes de iniciar e converse com a equipe.</p></details><details><summary>Preciso saber usar os aparelhos?</summary><p>Não precisa chegar sabendo. O programa é planejado a partir da sua avaliação, e o app JM Treino mostra cada exercício na ordem, com as séries, as repetições e a carga; a maioria deles tem foto ou vídeo de execução. Fora da avaliação, não há professor da campanha acompanhando o seu treino: quem conduz a sessão é o app, e a equipe da VS Gold SkyMall está por perto na unidade.</p></details><details class="so-aberta"><summary>Como é o pagamento?</summary><p>Só no cartão de crédito, em cobrança mensal e automática de R$ 249,90, até o cancelamento. A 1ª mensalidade é cobrada no dia da adesão, e as outras, no mesmo dia de cada mês (se o mês não tiver esse dia, a cobrança cai no último dia dele). Não há taxa de matrícula.</p></details><details class="so-aberta"><summary>Tem multa? Como eu cancelo?</summary><p>Não há fidelidade nem multa de cancelamento. Recomendamos pelo menos 3 meses de treino, o tempo da avaliação, da adaptação e da evolução, mas é uma recomendação, não uma obrigação. Você cancela pelo app (Minha Conta → Pagamentos), na recepção da VS Gold SkyMall ou pelo WhatsApp <span class="nw">(43) 99632-9538</span>. O acesso segue até o fim do período já pago, sem devolução dos dias restantes; para não pagar o mês seguinte, peça até a véspera do vencimento. Ao cancelar, a condição da campanha acaba: uma nova matrícula segue os planos e preços da época.</p></details><details class="so-aberta"><summary>Posso desistir depois de me matricular?</summary><p>Sim. Em até 7 dias a partir da 1ª cobrança, que é feita na adesão, você pode desistir com devolução integral do valor pago (direito de arrependimento, CDC art. 49). Basta pedir pelo app (Minha Conta → Pagamentos), na recepção da VS Gold SkyMall ou pelo WhatsApp <span class="nw">(43) 99632-9538</span>.</p></details><details class="so-aberta"><summary>O valor muda depois?</summary><p>Nas 12 primeiras mensalidades, o valor fica em R$ 249,90. A partir da 13ª, ele pode ser reajustado uma vez por ano, no máximo pela variação do IPCA acumulada em 12 meses, e só se ela for positiva. O novo valor é avisado com 30 dias de antecedência, e você pode cancelar sem ônus antes dele. A condição é pessoal e não se soma a outros descontos. As matrículas nesta condição vão até 31/10/2026.</p></details></div></div></section>
+<section class="final-banner"><svg class="ribbon" aria-hidden="true" focusable="false"><use href="#rosa"/></svg><h2>OUTUBRO ROSA É SOBRE VIDA.<br><span style="color:var(--rose)">E CUIDAR DELA COMEÇA AGORA.</span></h2><p>Troque a cobrança de ter que gostar de academia pela tranquilidade de ter um caminho. A Junior Mello Treinamentos e a VS Gold SkyMall te ajudam a começar.</p><p class="aviso-encerrada" role="status">A campanha Outubro Rosa encerrou em 31/10/2026. Fale com a equipe no WhatsApp para conhecer os planos atuais.</p><p class="alvo so-aberta">Para mulheres · a partir de 18 anos · matrículas até 31/10/2026</p><ul class="condicoes cond so-aberta"><li>R$&nbsp;249,90/mês no cartão de crédito, cobrado todo mês até o cancelamento</li><li>1ª mensalidade no dia da adesão, antes da avaliação física; as outras, no mesmo dia de cada mês</li><li>Sem taxa de matrícula, sem fidelidade e sem multa de cancelamento</li><li>Cancelamento pelo app, na recepção da VS Gold SkyMall ou pelo WhatsApp <span class="nw">(43) 99632-9538</span>, com acesso até o fim do período já pago</li><li>7 dias a partir da 1ª cobrança para desistir, com devolução integral (CDC art.&nbsp;49)</li><li>Valor fixo nas 12 primeiras mensalidades; depois, reajuste anual limitado ao IPCA. Se cancelar, voltar segue o preço da época</li></ul><a class="btn primary arrow js-checkout" href="https://www.jmtreino.com.br/c/7134c85e" data-rotulo-encerrada="Ver os planos atuais no WhatsApp"><span class="js-rotulo">Quero me matricular · R$&nbsp;249,90/mês</span></a><br><a class="alt so-aberta" href="#comece">Dúvidas? Converse no WhatsApp</a></section>
 </main>
-
-<footer class="rodape">
-  <div class="wrap">
-    <img src="/outubrorosa/logo-jm.webp" width="400" height="102" alt="Junior Mello Treinamentos" loading="lazy" decoding="async">
-    <p><strong>Junior Mello Treinamentos</strong> · app JM Treino · <a href="https://www.jmtreino.com.br">www.jmtreino.com.br</a></p>
-    <p>SH Academias LTDA · CNPJ 08.948.082/0001-02</p>
-    <p>Responsável técnico: Nelci Vander de Melo Júnior (Junior Mello) · CREF <span data-config="CREF">017708-G/PR</span></p>
-    <p>VS Gold SkyMall · <span data-config="ENDERECO">Avenida Maringá, 1500 · CEP 86060-000</span> · Londrina/PR</p>
-    <p><a class="alvo" href="https://wa.me/5543996329538">WhatsApp (43) 99632-9538</a></p>
-    <p class="letras">Campanha Outubro Rosa 2026: dirigida a mulheres, para maiores de 18 anos, em novas matrículas de 08/10/2026 a 31/10/2026. © 2026 Junior Mello Treinamentos.</p>
-  </div>
-</footer>
-
+<footer class="footer"><div class="wrap footer-grid"><div class="footer-brand"><img src="/outubrorosa/junior-mello-treinamentos.webp" loading="lazy" decoding="async" alt="" width="92" height="95" style="width:92px;height:95px;object-fit:cover;border-radius:5px"><span>Junior Mello Treinamentos · VS Gold SkyMall<br>Campanha Outubro Rosa 2026 · Londrina, PR</span></div><div class="footer-info">Conteúdo educativo. O exercício físico pode integrar prevenção e cuidados com a saúde, mas não previne todos os casos de câncer e não substitui exames, diagnóstico, tratamento ou orientação médica. O serviço oferecido é de avaliação física e prescrição de treinamento físico, não atendimento oncológico.<div class="footer-legal">Junior Mello Treinamentos · app JM Treino · www.jmtreino.com.br<br>SH Academias LTDA · CNPJ 08.948.082/0001-02<br>Responsável técnico: Junior Mello (Nelci Vander de Melo Júnior) · CREF <span data-config="CREF">017708-G/PR</span><br>VS Gold SkyMall · <span data-config="ENDERECO">Avenida Maringá, 1500 · CEP 86060-000</span> · Londrina/PR<br><a href="https://wa.me/5543996329538?text=Oi!%20Vi%20a%20campanha%20Outubro%20Rosa%20e%20tenho%20uma%20d%C3%BAvida.">WhatsApp <span class="nw">(43) 99632-9538</span></a><br>Campanha Outubro Rosa 2026: para mulheres a partir de 18 anos, em adesões de 08/10/2026 a 31/10/2026.<br>Esta página usa o Pixel da Meta para medir as visitas que vêm dos anúncios. Não coletamos dados de saúde aqui.</div></div></div></footer>
+<div class="mobile-bar"><a class="btn primary arrow js-checkout" href="https://www.jmtreino.com.br/c/7134c85e" data-rotulo-encerrada="Ver os planos atuais no WhatsApp"><span class="js-rotulo">Quero me matricular · R$&nbsp;249,90/mês</span></a></div>
 <!--
-  CHECKOUT DA CAMPANHA (app JM Treino, não WhatsApp):
-   • Campanha Outubro Rosa no app: www.jmtreino.com.br/c/7134c85e
-   • Os botões .js-checkout levam a /c/<token> com os UTMs da visita.
-   • CAMPAIGN_TOKEN vazio ou prazo vencido → os botões caem no WhatsApp.
-   • ?c=<token> na URL da página sobrepõe o token (para testes).
+  CHECKOUT DA CAMPANHA (app JM Treino):
+  • Campanha Outubro Rosa no app: www.jmtreino.com.br/c/7134c85e (campanhas.dias_trial = 0: cobra no dia).
+  • Os botões .js-checkout levam a /c/<token> com os UTMs/click ids da visita (localStorage jm_attr_outubrorosa).
+  • CAMPAIGN_TOKEN vazio ou prazo vencido → os botões caem no WhatsApp; html.encerrada esconde .so-aberta.
+  • ?c= na URL da página sobrepõe o token (para testes).
+  • O formulário #interest é o caminho secundário (tirar dúvida no WhatsApp).
 -->
 <script>
 (function () {
@@ -797,46 +200,75 @@
   var encerrada = Date.now() >= FIM;
   var destino = encerrada ? "" : checkoutUrl();
 
-  if (encerrada) {
+  // Quando o prazo vence com a página aberta, os botões viram WhatsApp no
+  // lugar, sem recarregar: quem estava lendo ou preenchendo não perde nada.
+  function rotularEncerrada() {
     document.documentElement.classList.add("encerrada");
     document.querySelectorAll(".js-prazo").forEach(function (el) { el.textContent = "Campanha encerrada em 31/10"; });
+    document.querySelectorAll(".js-checkout").forEach(function (a) {
+      a.setAttribute("href", whatsUrl(MSG_ENCERRADA));
+      var rotulo = a.querySelector(".js-rotulo");
+      if (rotulo && a.getAttribute("data-rotulo-encerrada")) rotulo.textContent = a.getAttribute("data-rotulo-encerrada");
+    });
   }
 
   document.querySelectorAll(".js-checkout").forEach(function (a) {
-    if (destino) {
-      a.setAttribute("href", destino);
-      a.addEventListener("click", function () { track("InitiateCheckout"); });
-    } else {
-      a.setAttribute("href", whatsUrl(encerrada ? MSG_ENCERRADA : "Oi! Vi a campanha Outubro Rosa e quero me matricular."));
-      var rotulo = a.querySelector(".js-rotulo");
-      if (encerrada && rotulo && a.getAttribute("data-rotulo-encerrada")) rotulo.textContent = a.getAttribute("data-rotulo-encerrada");
-      a.addEventListener("click", function () { track("Contact"); });
-    }
+    if (destino) a.setAttribute("href", destino);
+    else if (!encerrada) a.setAttribute("href", whatsUrl("Oi! Vi a campanha Outubro Rosa e quero me matricular."));
+    a.addEventListener("click", function () { track(destino && !encerrada ? "InitiateCheckout" : "Contact"); });
   });
+  if (encerrada) rotularEncerrada();
   document.querySelectorAll('a[href*="wa.me/"]:not(.js-checkout)').forEach(function (a) {
     a.addEventListener("click", function () { track("Contact"); });
   });
 
+  // Caminho secundário: o formulário abre o WhatsApp com a mensagem pronta (tirar dúvida).
+  var form = document.getElementById("interest");
+  if (form) form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var nome = form.querySelector("#first-name").value.trim().replace(/[\r\n\t]/g, " ").slice(0, 60);
+    var momento = form.querySelector("#moment").value;
+    var msg = "Olá! Vim da campanha Outubro Rosa da Junior Mello Treinamentos + VS Gold SkyMall. " +
+      (nome ? "Meu nome é " + nome + ". " : "") + momento + ". " +
+      (encerrada ? "Quero saber dos planos atuais." :
+        "Tenho uma dúvida antes de me matricular no programa de R$ 249,90/mês: como funcionam a avaliação física, o treino no app e o acesso à academia?");
+    track("Contact");
+    // Navega no lugar: o navegador interno do Instagram/Facebook pode barrar janela nova, em silêncio.
+    window.location.href = whatsUrl(msg);
+  });
+
   // Contador real até 31/10 23h59 (horário de Brasília). O número muda; a frase fixa é a lida.
   var faltas = document.querySelectorAll(".js-falta");
-  function plural(n, um, varios) { return n + " " + (n === 1 ? um : varios); }
+  function plural(n, um, varios) { return n + "\u00a0" + (n === 1 ? um : varios); }
   function atualizar() {
     var ms = FIM - Date.now();
     if (ms <= 0) {
-      if (!encerrada) { window.location.reload(); }
+      if (!encerrada) { encerrada = true; rotularEncerrada(); }
       return;
     }
     var min = Math.floor(ms / 60000);
     var d = Math.floor(min / 1440), h = Math.floor((min % 1440) / 60), m = min % 60;
     var txt;
-    if (d >= 2) txt = "· faltam " + d + " dias";
-    else if (d === 1) txt = "· falta 1 dia e " + plural(h, "hora", "horas");
-    else if (h >= 1) txt = "· faltam " + plural(h, "hora", "horas") + " e " + m + " min";
-    else txt = "· faltam " + (m || 1) + " min";
+    if (d >= 2) txt = "· faltam " + d + "\u00a0dias";
+    else if (d === 1) txt = "· falta 1\u00a0dia e " + plural(h, "hora", "horas");
+    else if (h >= 1) txt = "· " + (h === 1 ? "falta" : "faltam") + " " + plural(h, "hora", "horas") + " e " + m + "\u00a0min";
+    else txt = "· " + ((m || 1) === 1 ? "falta" : "faltam") + " " + (m || 1) + "\u00a0min";
     faltas.forEach(function (el) { el.textContent = txt; });
     setTimeout(atualizar, 60000 - (Date.now() % 60000) + 50);
   }
   if (!encerrada) atualizar();
+
+  // Celular: a barra fixa some enquanto o botão do herói está INTEIRO na tela,
+  // para não haver dois botões laranja, um cortado pelo outro. Sem JS (ou sem
+  // IntersectionObserver), a barra fica como sempre: o checkout nunca some.
+  var barra = document.querySelector(".mobile-bar");
+  var doHeroi = document.querySelector(".hero-actions .js-checkout");
+  if (barra && doHeroi && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (es) {
+      var e = es[es.length - 1];
+      barra.classList.toggle("oculta", e.isIntersecting && e.intersectionRatio >= 0.97);
+    }, { threshold: [0, 0.5, 0.97, 1] }).observe(doHeroi);
+  }
 })();
 </script>
 </body>
