@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#11100f">
+  <meta name="description" content="Conheça o app JM Treino: seu treino considera seu tempo e sua disposição, orienta cada exercício, ajuda a ajustar cargas e mostra sua evolução. Treine com mais clareza, no seu ritmo.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.jmtreino.com.br/aluno/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Junior Mello Treinamentos">
+  <meta property="og:url" content="https://www.jmtreino.com.br/aluno/">
+  <meta property="og:title" content="JM Treino — Seu treino acompanha você. Não o contrário.">
+  <meta property="og:description" content="O treino considera seu dia, orienta cada série e registra sua evolução. Conheça o aplicativo JM Treino pelo olhar de quem treina.">
+  <meta name="twitter:card" content="summary">
+  <title>JM Treino | Seu treino acompanha você. Não o contrário.</title>
+  <link rel="icon" type="image/png" href="/outubrorosa/favicon.png">
+  <link rel="apple-touch-icon" href="/outubrorosa/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#11100f;--ink:#f5f0e9;--muted:#b7afa7;--faint:#817870;--terra:#c35535;--terra-bright:#e0744d;--line:rgba(255,255,255,.11);--card:#1b1816;--cream:#f2ece4;--wrap:1160px}
+*,*:before,*:after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) .6px,transparent .6px);background-size:5px 5px;opacity:.13;pointer-events:none;z-index:40}
+a{color:inherit}button{font:inherit;cursor:pointer}img{max-width:100%;display:block}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #f18b60;outline-offset:4px}
+::selection{background:var(--terra);color:white}
+.wrap{width:min(calc(100% - 48px),var(--wrap));margin:auto}
+.over{display:inline-flex;gap:10px;align-items:center;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--terra-bright)}
+.over:before{content:"";width:25px;height:1px;background:currentColor}
+.display{font:400 clamp(43px,5.7vw,77px)/1.04 Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.004em;margin:13px 0 20px}
+.display em{font-style:normal;color:var(--terra-bright)}
+.copy{color:var(--muted);font-size:16px;line-height:1.8}
+.mini{font-size:12px;line-height:1.7;color:var(--faint)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:13px;padding:17px 26px;min-height:56px;background:var(--terra);border:1px solid var(--terra);text-decoration:none;color:white;font-weight:800;font-size:13px;line-height:1.45;text-align:center;border-radius:7px;transition:transform .2s,background .2s}
+.btn:hover{background:var(--terra-bright);transform:translateY(-2px)}
+.btn:after{content:"↗";font-size:19px;font-weight:400}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.25)}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.btn.light{background:var(--bg);border-color:var(--bg)}
+.section{padding:104px 0}
+.section-title{max-width:790px}
+.section-title .copy{margin:0}
+.hr{height:1px;background:var(--line)}
+/* navigation */
+.site-header{position:sticky;top:0;z-index:50;height:76px;background:rgba(17,16,15,.91);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:0}
+.brand img{height:37px;width:51px;object-fit:contain}
+.brand span{font-size:12px;line-height:1.18;font-weight:800;letter-spacing:.045em}
+.brand small{display:block;color:#a39b92;font-size:10px;margin-top:3px;letter-spacing:.09em;text-transform:uppercase}
+.links{display:flex;align-items:center;gap:29px}
+.links a{font-size:12px;font-weight:700;text-decoration:none;color:#c7beb5}
+.links a:hover{color:#fff}
+.nav-cta{font-size:11px;padding:10px 17px;min-height:42px}
+.nav-cta:after{font-size:16px}
+/* hero */
+.hero{min-height:680px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 76% 45%,rgba(177,61,33,.19),transparent 43%),radial-gradient(ellipse at 17% 105%,rgba(104,55,40,.16),transparent 48%),linear-gradient(115deg,#181411,#0e0e0d 65%)}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent 49.8%,rgba(255,255,255,.035) 50%,transparent 50.2%);opacity:.4}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr .94fr;gap:15px;align-items:center;min-height:680px}
+.hero-copy{padding:92px 0 100px;position:relative;z-index:3}
+.hero .display{font-size:clamp(63px,7.3vw,110px);line-height:.99;max-width:690px;margin:25px 0}
+.hero .display span{color:var(--terra-bright)}
+.hero-lead{max-width:550px;color:#d1c7be;font-size:18px;line-height:1.8;margin:0 0 30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-notes{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px}
+.hero-notes span{font-size:11px;color:#aaa199;display:flex;align-items:center;gap:9px}
+.hero-notes span:before{content:"";height:6px;width:6px;background:#cf6a45;border-radius:50%}
+.hero-visual{height:590px;position:relative;isolation:isolate}
+.hero-ring{position:absolute;inset:5% -21% 5% 2%;border-radius:50%;border:1px solid rgba(195,85,53,.2);transform:rotate(-19deg)}
+.hero-ring:after{content:"";position:absolute;inset:11%;border:1px solid rgba(255,255,255,.055);border-radius:50%}
+.phone{position:absolute;background:#0a0909;border:5px solid #322c28;border-radius:31px;padding:7px;overflow:hidden;box-shadow:12px 34px 75px rgba(0,0,0,.7),0 0 0 1px rgba(234,161,120,.2)}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:19px}
+.phone-main{width:263px;height:558px;right:17%;top:3%;transform:rotate(5deg);z-index:2;border-color:#785244}
+.phone-left{width:185px;height:411px;left:-2%;top:21%;transform:rotate(-13deg);z-index:1;filter:brightness(.77)}
+.phone-right{width:170px;height:361px;right:-12%;top:16%;transform:rotate(15deg);z-index:0;filter:brightness(.66)}
+.phone:before{content:"";position:absolute;z-index:3;top:7px;left:36%;width:28%;height:12px;background:#0a0909;border-radius:0 0 12px 12px}
+.float-note{position:absolute;z-index:4;left:0;bottom:10%;background:rgba(27,23,20,.94);padding:15px 19px;border:1px solid rgba(227,116,77,.32);box-shadow:0 18px 45px rgba(0,0,0,.6);max-width:235px;border-radius:10px;backdrop-filter:blur(12px)}
+.float-note strong{display:block;font:400 28px/1.2 Anton;color:#f4d8ca;text-transform:uppercase}
+.float-note span{font-size:11px;line-height:1.6;color:#c5b5ac}
+/* promise strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#171411}
+.strip-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.strip-item{padding:27px 32px;border-right:1px solid var(--line)}
+.strip-item:first-child{padding-left:0}.strip-item:last-child{border-right:0}
+.strip-item strong{display:block;font-size:13px;letter-spacing:.01em;margin-bottom:5px}
+.strip-item p{margin:0;color:#9f968d;font-size:12px;line-height:1.65}
+/* problem / story */
+.problem{background:#f1eae2;color:#231d19}
+.problem-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:82px;align-items:center}
+.problem .over{color:#a4462c}
+.problem .display{max-width:610px}
+.problem .display em{color:#a4462c}
+.problem .copy{color:#625952}
+.problem-quote{font-size:clamp(20px,2.5vw,30px);line-height:1.48;font-weight:800;letter-spacing:-.025em;max-width:470px}
+.problem-quote span{color:#a4462c}
+.problem-list{border-top:1px solid #d3c8be}
+.problem-list div{display:flex;gap:17px;padding:19px 0;border-bottom:1px solid #d3c8be;font-size:14px;font-weight:700;line-height:1.6}
+.problem-list b{color:#a4462c;font:400 22px/1 Anton}
+/* interactive check in */
+.day{background:linear-gradient(145deg,#181310,#100f0e)}
+.day-grid{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center}
+.day .copy{max-width:515px}
+.day-panel{border:1px solid rgba(218,107,69,.28);background:linear-gradient(160deg,#28201b,#181412 70%);padding:31px;border-radius:18px;box-shadow:0 35px 90px rgba(0,0,0,.25)}
+.day-panel-top{display:flex;justify-content:space-between;align-items:center;gap:15px;border-bottom:1px solid var(--line);padding-bottom:21px;margin-bottom:25px}
+.day-panel-top strong{font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.day-panel-top span{font-size:10px;color:#bca99e}
+.day-question{font:400 34px/1.12 Anton;text-transform:uppercase;margin:0 0 8px}
+.day-sub{color:#aca39a;font-size:13px;line-height:1.7;margin:0 0 18px}
+.choices{display:grid;gap:9px}
+.choice{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.12);border-radius:9px;min-height:52px;padding:13px 15px;color:#ded2c8;font-size:13px;text-align:left;font-weight:700}
+.choice:hover{border-color:#d48567}
+.choice[aria-pressed="true"]{background:rgba(195,85,53,.16);border-color:#df7e57;color:#fff}
+.choice[aria-pressed="true"]:after{content:"✓";display:grid;place-items:center;width:21px;height:21px;background:var(--terra);border-radius:50%;color:#fff}
+.day-result{margin-top:24px;padding:19px;border-radius:10px;background:rgba(195,85,53,.11);border-left:3px solid var(--terra)}
+.day-result span{display:block;font-size:10px;font-weight:800;letter-spacing:.12em;color:#dd987c;text-transform:uppercase;margin-bottom:7px}
+.day-result strong{display:block;font-size:16px;line-height:1.5}
+.day-result p{font-size:12px;line-height:1.75;color:#c3aca1;margin:8px 0 0}
+.day-disclaimer{font-size:11px;color:#8e8278;line-height:1.6;margin:15px 0 0}
+/* app proof */
+.proof{background:#0f0e0d}
+.proof-head{text-align:center;max-width:810px;margin:0 auto 53px}
+.proof-head .over:before{display:none}
+.proof-head .copy{max-width:670px;margin:0 auto}
+.proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.proof-card{background:linear-gradient(180deg,#211c19,#151211);border:1px solid var(--line);border-radius:14px;overflow:hidden;min-width:0}
+.proof-picture{height:340px;display:flex;justify-content:center;align-items:flex-start;overflow:hidden;position:relative;padding:20px 20px 0;background:radial-gradient(circle at 50% 80%,rgba(187,78,46,.23),transparent 66%)}
+.proof-picture img{width:196px;height:auto;border:4px solid #4a3830;border-radius:21px 21px 0 0;box-shadow:0 15px 35px #0009}
+.proof-picture:after{content:"";position:absolute;bottom:0;height:60px;left:0;right:0;background:linear-gradient(transparent,#171311)}
+.proof-text{padding:22px 23px 28px}
+.proof-text small{font:400 26px Anton;color:var(--terra-bright)}
+.proof-text h3{font-size:18px;line-height:1.35;margin:9px 0}
+.proof-text p{font-size:13px;color:#b6aaa0;line-height:1.75;margin:0}
+/* differences */
+.features{background:#171411}
+.features-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin-top:42px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.feature{padding:29px 35px 33px;min-height:220px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.feature-index{font:400 27px Anton;color:#bd6d4e}
+.feature h3{font-size:19px;margin:18px 0 10px}
+.feature p{font-size:14px;line-height:1.75;color:#b8ada3;max-width:430px;margin:0}
+/* choose guidance */
+.modes{background:#ece4da;color:#211b17}
+.modes .over{color:#a6472d}
+.modes .display em{color:#a6472d}
+.modes-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:37px}
+.mode{border:1px solid #d5c7bc;background:#faf6f0;padding:32px;border-radius:12px}
+.mode.dark{background:#25201c;color:#f7eee5;border-color:#40352e}
+.mode small{color:#9c4f37;letter-spacing:.16em;text-transform:uppercase;font-size:10px;font-weight:800}
+.mode.dark small{color:#ee9874}
+.mode h3{font:400 31px Anton;text-transform:uppercase;margin:14px 0}
+.mode p{font-size:14px;line-height:1.8;color:#6d5d53;margin:0}
+.mode.dark p{color:#c0afa2}
+.mode .mode-foot{margin-top:24px;padding-top:19px;border-top:1px solid #d8c8bc;font-size:12px;font-weight:800;color:#88422d}
+.mode.dark .mode-foot{border-color:#54463d;color:#e5a082}
+/* progression */
+.history{background:#100f0e}
+.history-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.history .copy{max-width:480px}
+.history-list{display:grid;gap:17px;margin-top:30px}
+.history-item{display:flex;gap:15px;align-items:start}
+.history-item i{font-style:normal;font:400 25px Anton;color:var(--terra-bright);min-width:29px}
+.history-item span{font-size:14px;line-height:1.65;color:#c3b7ac}
+.history-item strong{color:#fff}
+.history-visual{padding:32px;background:radial-gradient(circle at 50% 26%,rgba(186,78,46,.17),transparent 55%),#1b1714;border:1px solid var(--line);border-radius:18px;position:relative}
+.history-visual .card-label{font-size:10px;letter-spacing:.15em;font-weight:800;color:#d17d5b}
+.history-visual h3{font:400 38px Anton;margin:10px 0 25px;text-transform:uppercase}
+.history-line{display:flex;align-items:center;gap:12px;padding:15px 0;border-top:1px solid var(--line);font-size:13px;color:#c9bdb2}
+.history-line strong{margin-left:auto;color:#f5eae2;font-size:12px;text-align:right}
+.history-line .symbol{color:#d98260;font-size:20px}
+.history-note{font-size:11px;line-height:1.7;color:#8d8178;margin:22px 0 0}
+/* approach, faqs */
+.expert{background:#211a16;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.expert-grid{display:grid;grid-template-columns:.55fr 1fr;gap:70px;align-items:center}
+.expert-logo{width:190px;height:190px;object-fit:contain;margin:auto;filter:drop-shadow(0 22px 34px #0006)}
+.expert .display{max-width:680px}
+.expert .copy{max-width:700px}
+.steps{background:#f1eae2;color:#211c18}
+.steps .over{color:#a6472d}
+.steps .display em{color:#a6472d}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:42px}
+.step{border-top:2px solid #b35838;padding-top:19px}
+.step b{font:400 37px Anton;color:#a6472d}
+.step h3{font-size:17px;margin:15px 0 9px}
+.step p{font-size:13px;color:#64594f;line-height:1.75;margin:0}
+.faq{background:#171411}
+.faq-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:80px}
+.faq details{border-bottom:1px solid var(--line);padding:19px 0}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{cursor:pointer;font-weight:800;font-size:14px;line-height:1.5;list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font:400 25px Anton;color:var(--terra-bright)}
+.faq details[open] summary:after{content:"−"}
+.faq details p{font-size:13px;line-height:1.8;color:#b8aca2;max-width:630px;margin:17px 0 4px}
+.final{background:radial-gradient(circle at 85% 15%,rgba(228,125,79,.21),transparent 43%),linear-gradient(110deg,#b84a2e,#82341e);padding:100px 0}
+.final .over{color:#f6d6c9}.final .over:before{background:#f6d6c9}
+.final .display{max-width:780px;font-size:clamp(55px,6.5vw,88px)}
+.final p{max-width:570px;font-size:16px;line-height:1.8;color:#ffded0;margin:0 0 27px}
+.final .btn{background:#161210;border-color:#161210}
+.final .btn:hover{background:#342019}
+footer{padding:33px 0;background:#0e0d0c}
+.foot-inner{display:flex;align-items:center;justify-content:space-between;gap:22px}
+.foot-inner img{height:39px;width:auto}
+.foot-inner p{font-size:11px;color:#8f857d;line-height:1.7;margin:0}
+.foot-inner a{font-size:11px;color:#cdbeb2;text-decoration:none}
+.foot-inner a:hover{text-decoration:underline}
+.mobile-only{display:none}
+@media(max-width:980px){
+  .links{gap:17px}.links a{font-size:11px}
+  .hero-grid{grid-template-columns:1fr .82fr}
+  .phone-main{right:4%}.phone-left{left:-23%}.phone-right{display:none}.float-note{left:-15%}
+  .problem-grid,.day-grid,.history-grid{gap:38px}
+  .faq-grid{gap:40px}
+}
+@media(max-width:760px){
+  html{scroll-padding-top:70px}
+  .wrap{width:min(calc(100% - 36px),var(--wrap))}
+  .section{padding:72px 0}
+  .site-header{height:66px}
+  .brand img{width:45px;height:32px}.brand span{font-size:11px}
+  .links{display:none}.nav-cta{min-height:39px;padding:8px 11px;font-size:10px}
+  .hero-grid{display:flex;flex-direction:column;min-height:0;gap:0}
+  .hero-copy{padding:67px 0 8px}
+  .hero .display{font-size:clamp(58px,13.5vw,91px);max-width:590px}
+  .hero-lead{font-size:15px;line-height:1.8;margin-bottom:25px}
+  .hero-visual{height:465px;width:100%;max-width:440px;align-self:center}
+  .phone-main{width:200px;height:422px;right:16%;top:4%}
+  .phone-left{width:139px;height:316px;left:7%;top:20%;transform:rotate(-12deg)}
+  .phone-right{display:none}
+  .float-note{left:0;bottom:8%;max-width:185px;padding:11px 14px}
+  .float-note strong{font-size:22px}
+  .float-note span{font-size:10px}
+  .hero-ring{inset:4% -3% 1% 4%}
+  .strip-grid{grid-template-columns:1fr}
+  .strip-item{padding:17px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .strip-item:last-child{border-bottom:0}
+  .problem-grid,.day-grid,.history-grid,.expert-grid,.faq-grid{grid-template-columns:1fr;gap:37px}
+  .problem-quote{margin:0}
+  .proof-grid{grid-template-columns:1fr;gap:15px}
+  .proof-card{display:grid;grid-template-columns:42% 58%;min-height:260px;align-items:stretch}
+  .proof-picture{height:100%;padding:20px 10px 0}
+  .proof-picture img{width:155px}
+  .proof-text{padding:22px 17px 20px;align-self:center}
+  .proof-text h3{font-size:16px}
+  .proof-text p{font-size:12px}
+  .features-grid,.modes-grid{grid-template-columns:1fr}
+  .features-grid{margin-top:31px}
+  .feature{min-height:0;padding:23px}
+  .steps-grid{grid-template-columns:1fr;gap:20px}
+  .step{padding-top:14px}
+  .expert-logo{width:130px;height:130px;margin:0}
+  .final{padding:76px 0}
+  .foot-inner{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:410px){
+  .nav-cta{font-size:10px;padding:8px}
+  .nav-cta:after{content:"";display:none}
+  .brand{gap:6px}
+  .hero .display{font-size:57px}
+  .hero-notes{gap:10px 18px}
+  .hero-actions .btn{width:100%}
+  .phone-main{right:8%}.phone-left{left:1%}
+  .day-panel{padding:19px}
+  .day-question{font-size:29px}
+  .proof-card{grid-template-columns:40% 60%}
+  .proof-picture img{width:140px}
+  .proof-text{padding:18px 13px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn{transition:none}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#inicio" aria-label="JM Treino — voltar ao início">
+      <img src="/outubrorosa/jm-simbolo.webp" alt="" width="51" height="37">
+      <span>JM TREINO<small>Junior Mello Treinamentos</small></span>
+    </a>
+    <nav class="links" aria-label="Navegação principal">
+      <a href="#seu-dia">Seu dia</a>
+      <a href="#na-pratica">Na prática</a>
+      <a href="#evolucao">Sua evolução</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn nav-cta" href="https://wa.me/5543996329538?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20plano%20App%20JM%20Treino%20e%20entender%20como%20come%C3%A7ar." target="_blank" rel="noopener noreferrer">QUERO CONHECER</a>
+  </div>
+</header>
+<main>
+<section class="hero" id="inicio" aria-labelledby="titulo-inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="over">O aplicativo JM Treino · Feito para quem treina</span>
+      <h1 class="display" id="titulo-inicio">SEU TREINO ACOMPANHA <span>VOCÊ.</span><br>NÃO O CONTRÁRIO.</h1>
+      <p class="hero-lead">Tem dia que sobra energia. Tem dia que só sobram 25 minutos. O JM Treino ajuda você a saber o que fazer, como seguir e onde está evoluindo — sem depender de uma ficha esquecida no celular.</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://wa.me/5543996329538?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20plano%20App%20JM%20Treino%20e%20entender%20como%20come%C3%A7ar." target="_blank" rel="noopener noreferrer">QUERO TREINAR COM O JM TREINO</a>
+        <a class="btn ghost" href="#seu-dia">VEJA COMO FUNCIONA</a>
+      </div>
+      <div class="hero-notes" aria-label="Destaques">
+        <span>Seu tempo importa</span>
+        <span>Orientação em cada etapa</span>
+        <span>Seu progresso registrado</span>
+      </div>
+    </div>
+    <div class="hero-visual" aria-label="Imagens reais do aplicativo JM Treino">
+      <div class="hero-ring" aria-hidden="true"></div>
+      <div class="phone phone-left"><img src="/outubrorosa/app-lista-de-exercicios.webp" alt="Aplicativo mostrando a lista de exercícios" width="530" height="1148"></div>
+      <div class="phone phone-right"><img src="/outubrorosa/app-registro-de-carga.webp" alt="Tela de registro de carga por série" width="530" height="1149"></div>
+      <div class="phone phone-main"><img src="/outubrorosa/app-execucao-guiada.webp" alt="Tela real do aplicativo orientando a execução de um exercício" width="530" height="1148" fetchpriority="high"></div>
+      <div class="float-note"><strong>NÃO É SÓ UMA FICHA.</strong><span>É um caminho que você consegue seguir durante o treino.</span></div>
+    </div>
+  </div>
+</section>
+<div class="strip" aria-label="Três motivos para usar">
+  <div class="wrap strip-grid">
+    <div class="strip-item"><strong>Menos dúvida antes de começar.</strong><p>Você abre o app e entende qual é o próximo treino.</p></div>
+    <div class="strip-item"><strong>Mais clareza durante a execução.</strong><p>Séries, cargas, descansos e orientações no momento certo.</p></div>
+    <div class="strip-item"><strong>Mais memória do que você conquistou.</strong><p>Seu histórico não começa do zero toda semana.</p></div>
+  </div>
+</div>
+<section class="section problem" aria-labelledby="problema-titulo">
+  <div class="wrap problem-grid">
+    <div>
+      <span class="over">O treino precisa caber na vida</span>
+      <h2 class="display" id="problema-titulo">A DIFICULDADE NÃO É SÓ <em>COMEÇAR.</em><br>É CONSEGUIR CONTINUAR.</h2>
+      <p class="copy">Você não deveria precisar decorar o nome dos aparelhos, adivinhar as cargas ou desistir porque o dia não aconteceu como o planejado. A tecnologia pode ajudar a diminuir essas barreiras.</p>
+    </div>
+    <div>
+      <p class="problem-quote">“Eu tenho pouco tempo.”<br>“Esqueci quanto peguei.”<br>“E se eu fizer errado?”<br><span>O JM Treino foi pensado para essas situações reais.</span></p>
+      <div class="problem-list">
+        <div><b>01</b><span>Um caminho para quem precisa de orientação.</span></div>
+        <div><b>02</b><span>Ferramentas objetivas para quem já tem autonomia.</span></div>
+        <div><b>03</b><span>Informações que continuam de um treino para o outro.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section day" id="seu-dia" aria-labelledby="dia-titulo">
+  <div class="wrap day-grid">
+    <div>
+      <span class="over">Antes de começar</span>
+      <h2 class="display" id="dia-titulo">O TREINO QUE VOCÊ PRECISA HOJE NÃO É SEMPRE O MESMO DE <em>ONTEM.</em></h2>
+      <p class="copy">Antes da sessão, o aplicativo considera respostas sobre seu sono, possíveis dores e o tempo disponível. Essas informações ajudam a ajustar o trabalho daquele dia dentro das orientações do programa.</p>
+      <p class="copy"><strong style="color:#f6eee5">E se você tiver pouco tempo?</strong> O aplicativo pode concentrar o volume de treino em uma sessão mais curta, em vez de tratar a rotina apertada como motivo para desistir.</p>
+      <p class="mini">Em caso de dor forte ou limitação importante, a orientação profissional continua indispensável.</p>
+    </div>
+    <div class="day-panel">
+      <div class="day-panel-top"><strong>Uma escolha que faz diferença</strong><span>DEMONSTRAÇÃO</span></div>
+      <p class="day-question">QUANTO TEMPO VOCÊ TEM HOJE?</p>
+      <p class="day-sub">Experimente uma das situações abaixo para entender o princípio da adaptação.</p>
+      <div class="choices" role="group" aria-label="Tempo disponível para treinar">
+        <button type="button" class="choice" data-time="full" aria-pressed="false">Tenho tempo para o treino completo</button>
+        <button type="button" class="choice" data-time="medium" aria-pressed="false">Hoje preciso de um treino mais curto</button>
+        <button type="button" class="choice" data-time="short" aria-pressed="true">Só tenho cerca de 25 minutos</button>
+      </div>
+      <div class="day-result" aria-live="polite" aria-atomic="true">
+        <span>Como o JM Treino responde</span>
+        <strong id="time-title">A sessão é concentrada no tempo disponível.</strong>
+        <p id="time-copy">O sistema ajusta a quantidade de trabalho para priorizar uma sessão mais curta, dentro dos limites do programa e das informações do dia.</p>
+      </div>
+      <p class="day-disclaimer">Esta é uma explicação interativa, não uma prescrição de treino. A duração real depende do programa e das condições informadas.</p>
+    </div>
+  </div>
+</section>
+<section class="section proof" id="na-pratica" aria-labelledby="pratica-titulo">
+  <div class="wrap">
+    <div class="proof-head">
+      <span class="over">Veja o aplicativo em ação</span>
+      <h2 class="display" id="pratica-titulo">MENOS TEMPO TENTANDO ENTENDER.<br><em>MAIS CLAREZA PARA TREINAR.</em></h2>
+      <p class="copy">As telas abaixo são do JM Treino. Elas mostram como a experiência acompanha diferentes momentos da sua sessão.</p>
+    </div>
+    <div class="proof-grid">
+      <article class="proof-card">
+        <div class="proof-picture"><img loading="lazy" decoding="async" src="/outubrorosa/app-lista-de-exercicios.webp" alt="Tela real com sequência dos exercícios" width="530" height="1148"></div>
+        <div class="proof-text"><small>01 / ANTES</small><h3>Saiba o que vem pela frente.</h3><p>Seu treino organizado em uma sequência que você consegue consultar e seguir.</p></div>
+      </article>
+      <article class="proof-card">
+        <div class="proof-picture"><img loading="lazy" decoding="async" src="/outubrorosa/app-execucao-guiada.webp" alt="Tela real conduzindo o exercício" width="530" height="1148"></div>
+        <div class="proof-text"><small>02 / DURANTE</small><h3>Orientação na hora de executar.</h3><p>Instruções, demonstrações e condução por etapas, de acordo com o exercício.</p></div>
+      </article>
+      <article class="proof-card">
+        <div class="proof-picture"><img loading="lazy" decoding="async" src="/outubrorosa/app-registro-de-carga.webp" alt="Tela real de carga de uma série" width="530" height="1149"></div>
+        <div class="proof-text"><small>03 / A CADA SÉRIE</small><h3>O peso deixa de ser um palpite.</h3><p>Registre a carga e o esforço. Com histórico suficiente, o app ajuda a sugerir as próximas cargas.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section features" aria-labelledby="recursos-titulo">
+  <div class="wrap">
+    <div class="section-title">
+      <span class="over">O que muda no seu treino</span>
+      <h2 class="display" id="recursos-titulo">PEQUENAS AJUDAS QUE FAZEM <em>DIFERENÇA DE VERDADE.</em></h2>
+      <p class="copy">Mais importante do que ter muitos botões é ter a orientação certa quando surge uma dúvida.</p>
+    </div>
+    <div class="features-grid">
+      <article class="feature"><span class="feature-index">01</span><h3>“Qual carga eu uso?”</h3><p>O aplicativo pode usar o registro das suas séries anteriores e a percepção de esforço para oferecer uma referência, sem pedir que você memorize tudo.</p></article>
+      <article class="feature"><span class="feature-index">02</span><h3>“Esse aparelho está ocupado.”</h3><p>Quando uma troca é necessária, o sistema organiza alternativas considerando características do movimento e as limitações registradas.</p></article>
+      <article class="feature"><span class="feature-index">03</span><h3>“Não sei onde fica essa máquina.”</h3><p>Quando cadastradas pela equipe, a fotografia, a localização e as instruções de regulagem do equipamento aparecem no próprio exercício.</p></article>
+      <article class="feature"><span class="feature-index">04</span><h3>“Não entendi como fazer.”</h3><p>Vídeos, dicas técnicas e orientações específicas podem ser consultados no momento em que você precisa, sem sair do treino.</p></article>
+    </div>
+  </div>
+</section>
+<section class="section modes" aria-labelledby="modos-titulo">
+  <div class="wrap">
+    <span class="over">O seu jeito também importa</span>
+    <h2 class="display" id="modos-titulo">NEM TODO MUNDO GOSTA DE TREINAR DO <em>MESMO JEITO.</em></h2>
+    <p class="copy" style="max-width:710px;color:#645950">No modelo online, você pode escolher uma experiência com mais instruções ou mais direta. Isso muda a forma de apresentar as informações, não elimina os cuidados do treino.</p>
+    <div class="modes-grid">
+      <article class="mode">
+        <small>Para quem gosta de apoio</small>
+        <h3>QUERO SER CONDUZIDO.</h3>
+        <p>O aplicativo explica as etapas com mais calma, oferece dicas de forma mais presente e pergunta como você se sentiu ao realizar as séries.</p>
+        <div class="mode-foot">Mais direção. Menos dúvida.</div>
+      </article>
+      <article class="mode dark">
+        <small>Para quem prefere autonomia</small>
+        <h3>PREFIRO NO MEU RITMO.</h3>
+        <p>Uma experiência mais enxuta, com entrada direta no treino, ferramentas acessíveis quando necessário e informações técnicas sobre o esforço.</p>
+        <div class="mode-foot">Mais objetividade. Sem perder referência.</div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section history" id="evolucao" aria-labelledby="evolucao-titulo">
+  <div class="wrap history-grid">
+    <div>
+      <span class="over">Sua história merece ser vista</span>
+      <h2 class="display" id="evolucao-titulo">O ESPELHO NÃO CONTA <em>TODA A SUA EVOLUÇÃO.</em></h2>
+      <p class="copy">O JM Treino guarda sua trajetória: sessões realizadas, evolução das cargas, recordes e avaliações quando disponíveis. O fim do treino não é só um botão de concluir. É mais um registro do seu caminho.</p>
+      <div class="history-list">
+        <div class="history-item"><i>↗</i><span><strong>Cargas por exercício.</strong> Compare o que você realmente utilizou nas sessões.</span></div>
+        <div class="history-item"><i>↗</i><span><strong>Recordes pessoais.</strong> Reconheça avanços sem precisar competir com outras pessoas.</span></div>
+        <div class="history-item"><i>↗</i><span><strong>Constância e histórico.</strong> Entenda quanto já caminhou e qual é o próximo treino.</span></div>
+      </div>
+    </div>
+    <div class="history-visual" aria-label="Exemplos das informações disponíveis no histórico">
+      <span class="card-label">SUA HISTÓRIA NO JM TREINO</span>
+      <h3>MAIS DO QUE UMA FICHA.</h3>
+      <div class="history-line"><span class="symbol">↗</span><span>Progressão dos exercícios</span><strong>Cargas ao longo do tempo</strong></div>
+      <div class="history-line"><span class="symbol">◎</span><span>Suas sessões</span><strong>Histórico e constância</strong></div>
+      <div class="history-line"><span class="symbol">✦</span><span>Conquistas pessoais</span><strong>Seus próprios recordes</strong></div>
+      <div class="history-line"><span class="symbol">◉</span><span>Avaliações físicas</span><strong>Quando registradas</strong></div>
+      <p class="history-note">Visão ilustrativa das categorias de informação. Seus resultados são preenchidos com dados reais do seu treinamento.</p>
+    </div>
+  </div>
+</section>
+<section class="section expert" aria-labelledby="expert-titulo">
+  <div class="wrap expert-grid">
+    <img class="expert-logo" loading="lazy" src="/outubrorosa/junior-mello-treinamentos.webp" alt="Identidade Junior Mello Treinamentos" width="190" height="190">
+    <div>
+      <span class="over">Existe um critério por trás das telas</span>
+      <h2 class="display" id="expert-titulo">TECNOLOGIA PARA CONDUZIR.<br><em>CONHECIMENTO PARA ORIENTAR.</em></h2>
+      <p class="copy">O JM Treino nasceu do trabalho de Junior Mello com avaliação, prescrição e acompanhamento. O aplicativo ajuda a transformar o planejamento em ações compreensíveis durante a sessão — sem substituir o papel do profissional quando uma avaliação ou ajuste individual é necessário.</p>
+    </div>
+  </div>
+</section>
+<section class="section steps" id="como-comecar" aria-labelledby="comecar-titulo">
+  <div class="wrap">
+    <span class="over">Da intenção à prática</span>
+    <h2 class="display" id="comecar-titulo">VOCÊ NÃO PRECISA SABER TUDO PARA <em>DAR O PRIMEIRO PASSO.</em></h2>
+    <div class="steps-grid">
+      <div class="step"><b>01</b><h3>Converse com a equipe</h3><p>Entenda qual modalidade de acompanhamento faz sentido para sua rotina e onde você pretende treinar.</p></div>
+      <div class="step"><b>02</b><h3>Conte sobre você</h3><p>Seu ponto de partida, objetivos, experiência e informações relevantes ajudam a orientar a prescrição.</p></div>
+      <div class="step"><b>03</b><h3>Comece a seguir seu treino</h3><p>Com o programa liberado, o aplicativo acompanha a execução e registra o que você realiza.</p></div>
+    </div>
+    <div style="margin-top:37px"><a class="btn light" href="https://wa.me/5543996329538?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20plano%20App%20JM%20Treino%20e%20entender%20como%20come%C3%A7ar." target="_blank" rel="noopener noreferrer">QUERO ENTENDER COMO COMEÇAR</a></div>
+  </div>
+</section>
+<section class="section faq" id="duvidas" aria-labelledby="duvidas-titulo">
+  <div class="wrap faq-grid">
+    <div>
+      <span class="over">Perguntas frequentes</span>
+      <h2 class="display" id="duvidas-titulo">ANTES DE COMEÇAR, <em>FAZ SENTIDO PERGUNTAR.</em></h2>
+    </div>
+    <div>
+      <details><summary>Serve para quem nunca treinou?</summary><p>Sim. O aplicativo possui uma forma de condução mais explicativa, com demonstrações e orientações ao longo da sessão. Sua prescrição deve respeitar seu ponto de partida.</p></details>
+      <details><summary>E se eu já tenho experiência na academia?</summary><p>Você pode optar por uma experiência mais direta, com menos interrupções e ferramentas para acompanhar cargas, esforço e evolução.</p></details>
+      <details><summary>Posso usar o app em outra academia?</summary><p>A modalidade de consultoria online foi pensada para acompanhar o aluno em diferentes academias. A disponibilidade de cada exercício e de informações sobre os equipamentos varia conforme o local e a biblioteca cadastrada.</p></details>
+      <details><summary>O aplicativo substitui um personal trainer presencial?</summary><p>Não. O app orienta e registra a execução, mas não equivale à presença exclusiva de um profissional ao seu lado. A JM Treino trabalha com modalidades diferentes de serviço, que você pode conhecer com a equipe.</p></details>
+      <details><summary>Preciso aumentar a carga em todo treino?</summary><p>Não. O sistema usa registros e feedback para oferecer referências. Progredir pode envolver ajustes diferentes, e as decisões respeitam os limites definidos no programa.</p></details>
+      <details><summary>Quanto custa e como faço para contratar?</summary><p>As condições variam conforme a modalidade. Pelo botão de contato, você pode conhecer o plano do aplicativo, tirar dúvidas e entender a contratação antes de decidir.</p></details>
+    </div>
+  </div>
+</section>
+<section class="final" aria-labelledby="final-titulo">
+  <div class="wrap">
+    <span class="over">Seu próximo treino pode começar diferente</span>
+    <h2 class="display" id="final-titulo">VOCÊ NÃO PRECISA DE MAIS UMA FICHA.<br>PRECISA DE UM <span style="color:#ffdac8">CAMINHO QUE CONSIGA SEGUIR.</span></h2>
+    <p>Conheça o JM Treino e descubra como levar mais direção, autonomia e continuidade para a sua rotina de treinamento.</p>
+    <a class="btn" href="https://wa.me/5543996329538?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20plano%20App%20JM%20Treino%20e%20entender%20como%20come%C3%A7ar." target="_blank" rel="noopener noreferrer">QUERO CONHECER O JM TREINO</a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap foot-inner">
+    <div style="display:flex;align-items:center;gap:13px">
+      <img src="/outubrorosa/jm-simbolo.webp" alt="JM Treino" width="51" height="39" loading="lazy">
+      <p>© <span id="year">2026</span> Junior Mello Treinamentos.<br>Orientação e tecnologia a serviço do seu treino.</p>
+    </div>
+    <div style="display:flex;gap:21px;flex-wrap:wrap">
+      <a href="https://www.jmtreino.com.br/">Site principal</a>
+      <a href="https://wa.me/5543996329538?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20JM%20Treino." target="_blank" rel="noopener noreferrer">Fale com a equipe</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var buttons=document.querySelectorAll('[data-time]');
+  var title=document.getElementById('time-title');
+  var copy=document.getElementById('time-copy');
+  var messages={
+    full:['O programa completo segue como planejado.','Com tempo disponível e conforme suas respostas sobre o dia, a sessão pode manter o volume integral definido no programa.'],
+    medium:['O treino considera o tempo mais curto.','O sistema pode reduzir o volume da sessão e concentrar o trabalho nos exercícios selecionados, sem simplesmente acelerar o descanso.'],
+    short:['A sessão é concentrada no tempo disponível.','O sistema ajusta a quantidade de trabalho para priorizar uma sessão mais curta, dentro dos limites do programa e das informações do dia.']
+  };
+  buttons.forEach(function(button){
+    button.addEventListener('click',function(){
+      buttons.forEach(function(b){b.setAttribute('aria-pressed',String(b===button));});
+      var item=messages[button.getAttribute('data-time')];
+      if(item){title.textContent=item[0];copy.textContent=item[1];}
+    });
+  });
+  var y=document.getElementById('year');
+  if(y){y.textContent=String(new Date().getFullYear());}
+})();
+</script>
+</body>
+</html>
